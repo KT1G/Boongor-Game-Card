@@ -1,7 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
 export const header = style({
-  width: '100%',
   display: 'flex',
   height: '5rem',
   padding: '0.5rem',

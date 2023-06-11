@@ -4,7 +4,13 @@ import CardsWithAbility from './components/Card/CardsWithAbility'
 import CardBasic from './components/Card/CardBasic'
 import Header from './components/Header'
 
-import { main, buttonsSwitch, containersCardAnimated } from './css/main.css'
+import {
+  main,
+  buttonsSwitch,
+  containersCardAnimated,
+  borderButtons,
+  containerButtons,
+} from './css/main.css'
 
 function App() {
   const [displayMode, setDisplayMode] = useState<'basic' | 'ability'>('basic')
@@ -24,22 +30,25 @@ function App() {
     <>
       <Header />
       <main className={main}>
-        <button
-          className={buttonsSwitch}
-          type='button'
-          disabled={displayMode === 'basic'}
-          onClick={handleBasicButtonClick}
-        >
-          BASIC
-        </button>
-        <button
-          className={buttonsSwitch}
-          type='button'
-          disabled={displayMode === 'ability'}
-          onClick={handleAbilityButtonClick}
-        >
-          Ability
-        </button>
+        <div className={containerButtons}>
+          <button
+            className={buttonsSwitch}
+            type='button'
+            disabled={displayMode === 'basic'}
+            onClick={handleBasicButtonClick}
+          >
+            BASIC
+          </button>
+          <button
+            className={buttonsSwitch}
+            type='button'
+            disabled={displayMode === 'ability'}
+            onClick={handleAbilityButtonClick}
+          >
+            Ability
+          </button>
+        </div>
+        <div className={borderButtons} />
         <AnimatePresence mode='wait'>
           {displayMode === 'basic' ? (
             <motion.div

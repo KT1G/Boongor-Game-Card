@@ -10,22 +10,20 @@ export const main = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  flexWrap: 'wrap',
+  flexDirection: 'column',
   gap: '1rem',
   '@media': {
     'screen and (max-width: 800px)': {
-      gap: '3rem',
+     
     },
   },
 })
 
-export const containersCardAnimated = style({
+// buttons
+
+export const containerButtons = style({
   display: 'flex',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-  justifyContent: 'center',
   gap: '2rem',
-  marginBottom: '10rem',
 })
 
 export const buttonsSwitch = style({
@@ -46,4 +44,22 @@ export const buttonsSwitch = style({
     color: 'black', // Cambiar el color de texto según necesites,
     cursor: 'auto',
   },
+})
+
+export const borderButtons = style({
+  zIndex: 10,
+  width: 'clamp(350px,50%,1000px)',
+  height: '1px',
+  background:
+    ' radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(254,254,254,1) 0%, rgba(255,255,255,0) 100%)',
+})
+
+// Container cardsAnimations
+export const containersCardAnimated = style({
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '2rem',
+  marginBottom: '10rem',
 })
