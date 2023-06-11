@@ -159,7 +159,7 @@ export const descriptionTittle = style({
 export const descriptionText = style({
   zIndex: '99',
   color: '#e3fffa',
-  fontFamily: `${font} sans-serif, monospace`,
+  fontFamily: font,
   fontSize: '10px',
   fontWeight: '25px',
   '@media': {

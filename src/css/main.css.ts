@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css'
 import { font } from '../text.css'
 
 export const main = style({
-  fontFamily: `${font} sans-serif, monospace`,
+  fontFamily: font,
   height: '100%',
   margin: 'auto',
   marginTop: '10rem',
