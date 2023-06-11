@@ -18,23 +18,25 @@ export const card = style({
     height: '100%',
     background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 78%)',
   },
-  '@media (width <= 800px )': {
-    width: '16rem',
-    height: '25rem',
-  },
 
-  '@media (width <= 650px )': {
-    width: '13.5rem',
-    height: '20rem',
-  },
-  '@media (width <= 555px )': {
-    width: '12rem',
-    height: '18rem',
-  },
-  '@media (width <= 500px )': {
-    width: '95%',
-    height: '35rem',
-    border: '6px solid #212021',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      width: '16rem',
+      height: '25rem',
+    },
+    'screen and (max-width: 650px)': {
+      width: '13.5rem',
+      height: '20rem',
+    },
+    'screen and (max-width: 555px)': {
+      width: '12rem',
+      height: '18rem',
+    },
+    'screen and (max-width: 500px)': {
+      width: '95%',
+      height: '35rem',
+      border: '6px solid #212021',
+    },
   },
 })
 
@@ -64,9 +66,12 @@ export const containerPersona = style({
   borderRadius: '10px',
   fontFamily: 'metrofutura',
   borderWidth: '1px solid ',
-  '@media (width <= 500px )': {
-    height: '.7rem',
-    width: '5rem',
+
+  '@media': {
+    'screen and (max-width: 500px)': {
+      width: '5rem',
+      height: '.7rem',
+    },
   },
 })
 
@@ -76,8 +81,10 @@ export const titlePersona = style({
   letterSpacing: '2px',
   fontSize: '8px',
   textAlign: 'center',
-  '@media (width <= 500px )': {
-    fontSize: '12px',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      fontSize: '12px',
+    },
   },
 })
 
@@ -94,9 +101,11 @@ export const tipo = style({
   top: -1,
   background:
     'linear-gradient(0deg, rgba(11,11,11,1) 0%, rgba(38,38,38,1) 49%, rgba(33,32,33,1) 100%)',
-  '@media (width <= 500px )': {
-    height: '45px',
-    width: '45px',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      width: '45px',
+      height: '45px',
+    },
   },
 })
 
@@ -107,9 +116,11 @@ export const tipoImage = style({
   objectPosition: 'center',
   width: '70%',
   height: '80%',
-  '@media (width <= 500px )': {
-    left: '15px',
-    width: '60%',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      left: '15px',
+      width: '60%',
+    },
   },
 })
 
@@ -125,9 +136,11 @@ export const description = style({
   textAlign: 'center',
   width: '90%',
   color: 'white',
-  '@media (width <= 500px )': {
-    bottom: '70px',
-    left: '18px',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      bottom: '70px',
+      left: '18px',
+    },
   },
 })
 export const descriptionTittle = style({
@@ -137,8 +150,10 @@ export const descriptionTittle = style({
   fontFamily: 'metrofutura',
   fontWeight: 'bold',
   textAlign: 'center',
-  '@media (width <= 500px )': {
-    fontSize: '33px',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      fontSize: '33px',
+    },
   },
 })
 export const descriptionText = style({
@@ -147,8 +162,10 @@ export const descriptionText = style({
   fontFamily: font,
   fontSize: '10px',
   fontWeight: '25px',
-  '@media (width <= 500px )': {
-    fontSize: '17px',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      fontSize: '17px',
+    },
   },
 })
 

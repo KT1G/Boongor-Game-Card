@@ -2,7 +2,6 @@ import { style } from '@vanilla-extract/css'
 import { font } from '../text.css'
 
 export const main = style({
-
   fontFamily: font,
   height: '100%',
   margin: 'auto',
@@ -13,7 +12,9 @@ export const main = style({
   justifyContent: 'center',
   flexWrap: 'wrap',
   gap: '1rem',
-  '@media (width <= 800px )': {
-    gap: '3rem',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      gap: '3rem',
+    },
   },
 })
