@@ -8,6 +8,11 @@ export const header = style({
   alignItems: 'center',
   backgroundColor: '#111111',
   borderBottom: '1px solid #696053',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      justifyContent: 'center',
+    },
+  },
 })
 
 export const title = style({
