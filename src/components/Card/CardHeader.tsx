@@ -1,11 +1,11 @@
 import { Carta } from '../../data/cartas'
 import {
   header,
-  containerPersona,
+  containerName,
   tipoContainerWithoutAbility,
   tipoDamageWithAbility,
   tipoContainerWithAbility,
-  titlePersona,
+  textName,
 } from './Card.css'
 
 interface Props {
@@ -20,11 +20,18 @@ const CardHeader = ({ name, typeDamage, type }: Props) => {
       ? tipoContainerWithAbility
       : tipoContainerWithoutAbility
   const isBasicCard = type === 'basic'
+  const colorTrap = type === 'trap' ? 'hsl(0, 100%, 20%)' : ''
   return (
     <header className={header}>
       {!isBasicCard && (
-        <div className={containerPersona}>
-          <p className={titlePersona}>{name}</p>
+        <div
+          style={{
+            background: colorTrap,
+            color: 'white'
+          }}
+          className={containerName}
+        >
+          <p className={textName}>{name}</p>
         </div>
       )}
       {typeDamage != null && (

@@ -54,11 +54,11 @@ export const header = style({
   zIndex: '1',
 })
 
-export const containerPersona = style({
+export const containerName = style({
   position: 'relative',
   minWidth: '3rem',
   padding: '.3rem',
-  marginTop: '2px',
+  marginTop: '3px',
   background:
     'linear-gradient(0deg, rgba(11,11,11,1) 0%, rgba(38,38,38,1) 49%, rgba(33,32,33,1) 100%)',
 
@@ -79,7 +79,7 @@ export const containerPersona = style({
   },
 })
 
-export const titlePersona = style({
+export const textName = style({
   position: 'relative',
   textTransform: 'uppercase',
   letterSpacing: '2px',
