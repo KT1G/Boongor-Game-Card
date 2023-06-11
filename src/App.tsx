@@ -10,9 +10,9 @@ import {
   main,
   buttonsSwitch,
   containersCardAnimated,
-  borderButtons,
   containerButtons,
 } from './css/main.css'
+import BorderBottom from './components/Comun/BorderBottom'
 
 function App() {
   const [displayMode, setDisplayMode] = useState<CardType>('basic')
@@ -52,7 +52,7 @@ function App() {
             TRAP
           </button>
         </div>
-        <div className={borderButtons} />
+        <BorderBottom/>
         <AnimatePresence mode='wait'>
           {displayMode === 'basic' && (
             <motion.div

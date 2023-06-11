@@ -307,7 +307,7 @@ export const cartasTrampa: Carta[] = [
   {
     id: 1,
     name: 'Trampa',
-    titulo: 'Dejame ir delante, que me mareo',
+    titulo: 'Dejame ir delante',
     habilidad:
       'Independientemente de quien tenga la prioridad, tu habilidad se activará primero',
     imagen: dejameIrCard,

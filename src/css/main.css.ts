@@ -13,9 +13,7 @@ export const main = style({
   flexDirection: 'column',
   gap: '1rem',
   '@media': {
-    'screen and (max-width: 800px)': {
-     
-    },
+    'screen and (max-width: 800px)': {},
   },
 })
 
@@ -46,9 +44,11 @@ export const buttonsSwitch = style({
   },
 })
 
-export const borderButtons = style({
+export const borderBottom = style({
+  margin: 'auto',
   zIndex: 10,
-  width: 'clamp(350px,50%,1000px)',
+  width: 'clamp(30px,70%,1000px)',
+  marginBottom: '5px',
   height: '1px',
   background:
     ' radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(254,254,254,1) 0%, rgba(255,255,255,0) 100%)',

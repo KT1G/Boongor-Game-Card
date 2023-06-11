@@ -1,4 +1,5 @@
 import { Carta } from '../../data/cartas'
+import BorderBottom from '../Comun/BorderBottom'
 import { description, descriptionTittle, descriptionText } from './Card.css'
 
 interface Props {
@@ -6,10 +7,11 @@ interface Props {
   ability?: Carta['habilidad']
 }
 
-const CardBody = ({ title = "", ability = "" }: Props) => {
+const CardBody = ({ title = '', ability = '' }: Props) => {
   return (
     <section className={description}>
       <h3 className={descriptionTittle}>{title}</h3>
+      {title !== "" && <BorderBottom />}
       <p className={descriptionText}>{ability}</p>
     </section>
   )
