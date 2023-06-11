@@ -15,7 +15,7 @@ import {
 import BorderBottom from './components/Comun/BorderBottom'
 
 function App() {
-  const [displayMode, setDisplayMode] = useState<CardType>('basic')
+  const [displayMode, setDisplayMode] = useState<CardType>('habilidad')
 
   const handleButtonClick = (mode: CardType) => {
     if (displayMode !== mode) {
@@ -52,7 +52,7 @@ function App() {
             TRAP
           </button>
         </div>
-        <BorderBottom/>
+        <BorderBottom />
         <AnimatePresence mode='wait'>
           {displayMode === 'basic' && (
             <motion.div
