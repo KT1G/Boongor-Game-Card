@@ -1,15 +1,18 @@
 import { style } from '@vanilla-extract/css'
-import { font } from '../text.css'
+import { font } from '../../text.css'
 
 // HEADER
 export const card = style({
   position: 'relative',
+  backgroundColor: '#212021',
   cursor: 'pointer',
-  border: '4px solid #212021',
+  border: '7px solid #212021',
+  borderRadius: '5px',
   width: '13.5rem',
   height: '20rem',
   ':before': {
     position: 'absolute',
+    borderRadius: '5px',
     zIndex: 1,
     content: '',
     bottom: '0',
@@ -109,7 +112,22 @@ export const tipo = style({
   },
 })
 
-export const tipoImage = style({
+export const tipoDamageWithAbility = style({
+  position: 'absolute',
+  objectFit: 'contain',
+  right: 3,
+  objectPosition: 'center',
+  width: '70%',
+  height: '80%',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      left: '15px',
+      width: '60%',
+    },
+  },
+})
+
+export const tipoDamageWithNoAbility = style({
   position: 'absolute',
   objectFit: 'contain',
   right: 3,
@@ -169,8 +187,25 @@ export const descriptionText = style({
   },
 })
 
+// IMGAE
+
+
+
 export const image = style({
   position: 'absolute',
+  borderRadius: '5px',
+  top: '0',
+  left: '0',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  objectPosition: 'center',
+  filter: 'blur(3)',
+})
+
+export const imageBasic = style({
+  position: 'absolute',
+  borderRadius: '5px',
   top: '0',
   left: '0',
   width: '100%',

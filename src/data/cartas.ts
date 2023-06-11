@@ -15,159 +15,277 @@ import osoCard2 from '../assets/oso/osoCard2.webp'
 import zCard1 from '../assets/z/zCard1.webp'
 import zCard2 from '../assets/z/zCard2.webp'
 
+export type CardType = 'basic' | 'habilidad' | 'trap' | 'point'
+
 export interface Carta {
   id: number
-  persona: string
-  titulo: string
-  tipo: string
-  habilidad: string
+  cartaTipo: CardType
   imagen: string
+  name?: string
+  titulo?: string
+  tipo?: string
+  habilidad?: string
 }
 
-export const cartas: Carta[] = [
+export const cartasConHabilidad: Carta[] = [
   {
     id: 1,
-    persona: 'Jason',
+    name: 'Jason',
     titulo: 'Jacobo no sabe lo que quiere',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Al final del turno, después de robar, puedes devolver tus cartas al mazo y robar el mismo número.',
     imagen: jacoCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 2,
-    persona: 'Oso',
+    name: 'Oso',
     titulo: 'Oso Rapero',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Si la última palabra de la descripción de tu oponente acaba en vocal, si ganas el turno sumarás un punto extra a la racha.',
     imagen: osoCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 3,
-    persona: 'Oso',
+    name: 'Oso',
     titulo: 'Oso Hambriento',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Obligas a tu oponente a desechar una de sus cartas, si ganas este turno la carta vuelve a tu mano.',
     imagen: osoCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 4,
-    persona: 'Elious',
+    name: 'Elious',
     titulo: 'Elías Huevos Caseros',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Si tu oponente utiliza una carta del mismo tipo, ganarás el turno independientemente de la habilidad de tu oponente.',
     imagen: eliasCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 5,
-    persona: 'Elious',
+    name: 'Elious',
     titulo: 'Seguro que la pierdo...',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Si pierdes la mano, aumentas en uno el número de cartas trampa que puedes usar por turno.',
     imagen: eliasCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 6,
-    persona: 'ElKaters',
+    name: 'ElKaters',
     titulo: 'Braian Siempre Tiene Razón',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Anulas la habilidad de tu oponente, si ganas aumenta el número máximo de cartas que puedes tener en la mano en uno.',
     imagen: braianCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 7,
-    persona: 'ElKaters',
+    name: 'ElKaters',
     titulo: 'Braian Todo lo Sabe',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Puedes ver 2 cartas a tu elección de la mano de tu oponente, si ganas la ronda puedes quedarte una de ellas o robar una carta extra este turno.',
     imagen: braianCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 8,
-    persona: 'Chomi',
+    name: 'Chomi',
     titulo: 'Lucas Policía',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Tu rival no podrá robar carta el siguiente turno, en caso de perder la ronda robas 2 cartas extra.',
     imagen: chomsCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 9,
-    persona: 'Chomi',
+    name: 'Chomi',
     titulo: 'Iguales ante la Ley',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'En caso de empate robas una carta extra durante los 3 próximos turnos.',
     imagen: chomsCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 10,
-    persona: 'Yurch',
+    name: 'Yurch',
     titulo: 'Jorgiña',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Copias la habilidad de la carta de tu oponente que acaba de usar este turno. Si la carta no tiene habilidad y pierdes, anulas tu racha de derrotas.',
     imagen: jorgeCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 11,
-    persona: 'Yurch',
+    name: 'Yurch',
     titulo: 'Como Pez en el Agua',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Anulas cualquier carta trampa que tu oponente pueda activar esta ronda, no se puede cancelar su efecto.',
     imagen: jorgeCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 12,
-    persona: 'Jason',
+    name: 'Jason',
     titulo: 'Vigorizador',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Duplica el efecto de tu siguiente carta de Desafío si tu habilidad se activa primero y no empatas esta ronda, permanecerá en la mesa hasta que se aplique su efecto.',
     imagen: jacoCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 13,
-    persona: 'Alexito',
+    name: 'Alexito',
     titulo: 'ALL-IN',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Si ganas este turno, subes 2 escalones; si pierdes, bajas uno. Se resetea la racha de victorias o derrotas.',
     imagen: alexitoCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 14,
-    persona: 'Alexito',
+    name: 'Alexito',
     titulo: 'Ratatata',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Puedes desafiar a dos oponentes diferentes en este turno. Juega una carta de desafío contra cada uno y resuelve los enfrentamientos por separado. Si ganas ambos enfrentamientos, subes 1 escalón. Tu racha de victorias no se ve afectada.',
     imagen: alexitoCard2,
+    cartaTipo: 'habilidad',
   },
   {
     id: 15,
-    persona: 'MagnumZRare',
+    name: 'MagnumZRare',
     titulo: 'Felix, Maestro del caos',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Obligas a intercambiar las cartas de la mano de tu oponente con las tuyas al final del turno, el intercambio será equivalente al número de cartas del jugador que tenga menos, si ganas puedes hacer un intercambio completo, independientemente de la diferencia de cartas entre ambos.',
     imagen: zCard1,
+    cartaTipo: 'habilidad',
   },
   {
     id: 16,
-    persona: 'MagnumZRare',
+    name: 'MagnumZRare',
     titulo: 'El poder del cabello nasal',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Elige una carta de tu oponente de forma aleatoria, si es una carta trampa, la descartas y ganas el turno. Si ya ganabas, sumas un punto extra a la racha.',
     imagen: zCard2,
+    cartaTipo: 'habilidad',
+  },
+]
+
+export const cartasSinHabilidad: Carta[] = [
+  {
+    id: 1,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
+    imagen: jacoCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 2,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
+    imagen: osoCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 3,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
+    imagen: osoCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 4,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
+    imagen: eliasCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 5,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
+    imagen: eliasCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 6,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
+    imagen: braianCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 7,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
+    imagen: braianCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 8,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
+    imagen: chomsCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 9,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
+    imagen: chomsCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 10,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
+    imagen: jorgeCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 11,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
+    imagen: jorgeCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 12,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
+    imagen: jacoCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 13,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
+    imagen: alexitoCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 14,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
+    imagen: alexitoCard2,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 15,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
+    imagen: zCard1,
+    cartaTipo: 'basic',
+  },
+  {
+    id: 16,
+    tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
+    imagen: zCard2,
+    cartaTipo: 'basic',
   },
 ]
 
