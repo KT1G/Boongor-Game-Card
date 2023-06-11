@@ -45,7 +45,7 @@ function App() {
             disabled={displayMode === 'ability'}
             onClick={handleAbilityButtonClick}
           >
-            Ability
+            ABILITY
           </button>
         </div>
         <div className={borderButtons} />

@@ -2,9 +2,9 @@ import { Carta } from '../../data/cartas'
 import {
   header,
   containerPersona,
-  tipo,
+  tipoContainerWithoutAbility,
   tipoDamageWithAbility,
-  tipoDamageWithNoAbility,
+  tipoContainerWithAbility,
   titlePersona,
 } from './Card.css'
 
@@ -16,20 +16,22 @@ interface Props {
 
 const CardHeader = ({ name, typeDamage, type }: Props) => {
   const cssTipoImage =
-    type === 'habilidad' ? tipoDamageWithAbility : tipoDamageWithNoAbility
+    type === 'habilidad'
+      ? tipoContainerWithAbility
+      : tipoContainerWithoutAbility
   const isBasicCard = type === 'basic'
   return (
     <header className={header}>
       {!isBasicCard && (
         <div className={containerPersona}>
-          <p className={titlePersona}>{name}</p>         
+          <p className={titlePersona}>{name}</p>
         </div>
       )}
-      <div className={tipo}>
-        {typeDamage != null && (
-          <img className={cssTipoImage} src={typeDamage} />
-        )}
-      </div>
+      {typeDamage != null && (
+        <div className={cssTipoImage}>
+          <img className={tipoDamageWithAbility} src={typeDamage} />
+        </div>
+      )}
     </header>
   )
 }

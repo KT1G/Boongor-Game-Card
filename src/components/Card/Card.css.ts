@@ -5,6 +5,7 @@ import { font } from '../../text.css'
 export const card = style({
   position: 'relative',
   backgroundColor: '#212021',
+  overflow: 'hidden',
   cursor: 'pointer',
   border: '7px solid #212021',
   borderRadius: '5px',
@@ -91,7 +92,74 @@ export const titlePersona = style({
   },
 })
 
-export const tipo = style({
+export const tipoContainerWithoutAbility = style({
+  position: 'absolute',
+  top: '8rem',
+  left: '3.1rem',
+  height: '100px',
+  width: '100px',
+  borderRadius: '50%',
+  ':before': {
+    position: 'absolute',
+    left: '.7rem',
+    top: '-.7rem',
+    borderRadius: '50%',
+    content: '',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'black',
+    filter: 'blur(17px) ',
+  },
+  '@media': {
+    'screen and (max-width: 800px)': {
+      position: 'absolute',
+      top: '11rem',
+      left: '4.3rem',
+      height: '100px',
+      width: '100px',
+      borderRadius: '50%',
+    },
+    'screen and (max-width: 650px)': {
+      position: 'absolute',
+      top: '9rem',
+      left: '2.9rem',
+      height: '100px',
+      width: '100px',
+      borderRadius: '50%',
+    },
+    'screen and (max-width: 550px)': {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-60%, 100%)',
+      height: '100px',
+      width: '100px',
+      borderRadius: '50%',
+    },
+    'screen and (max-width: 500px)': {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-37%, 100%)',
+      height: '200px',
+      width: '200px',
+      borderRadius: '50%',
+      ':before': {
+        position: 'absolute',
+        left: '-1.2rem',
+        top: '-1rem',
+        borderRadius: '50%',
+        content: '',
+        width: '%',
+        height: '100%',
+        backgroundColor: 'black',
+        filter: 'blur(17px) ',
+      },
+    },
+  },
+})
+
+export const tipoContainerWithAbility = style({
   position: 'absolute',
   height: '20px',
   width: '20px',
@@ -113,21 +181,6 @@ export const tipo = style({
 })
 
 export const tipoDamageWithAbility = style({
-  position: 'absolute',
-  objectFit: 'contain',
-  right: 3,
-  objectPosition: 'center',
-  width: '70%',
-  height: '80%',
-  '@media': {
-    'screen and (max-width: 500px)': {
-      left: '15px',
-      width: '60%',
-    },
-  },
-})
-
-export const tipoDamageWithNoAbility = style({
   position: 'absolute',
   objectFit: 'contain',
   right: 3,
@@ -189,8 +242,6 @@ export const descriptionText = style({
 
 // IMGAE
 
-
-
 export const image = style({
   position: 'absolute',
   borderRadius: '5px',
@@ -200,7 +251,6 @@ export const image = style({
   height: '100%',
   objectFit: 'cover',
   objectPosition: 'center',
-  filter: 'blur(3)',
 })
 
 export const imageBasic = style({
