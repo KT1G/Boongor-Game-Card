@@ -94,7 +94,7 @@ export const titlePersona = style({
 
 export const tipoContainerWithoutAbility = style({
   position: 'absolute',
-  top: '8rem',
+  top: '9rem',
   left: '3.1rem',
   height: '100px',
   width: '100px',
@@ -102,13 +102,13 @@ export const tipoContainerWithoutAbility = style({
   ':before': {
     position: 'absolute',
     left: '.7rem',
-    top: '-.7rem',
+    top: '-.8rem',
     borderRadius: '50%',
     content: '',
     width: '100%',
     height: '100%',
     backgroundColor: 'black',
-    filter: 'blur(17px) ',
+    filter: 'blur(14px) ',
   },
   '@media': {
     'screen and (max-width: 800px)': {

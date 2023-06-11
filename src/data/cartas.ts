@@ -15,6 +15,19 @@ import osoCard2 from '../assets/oso/osoCard2.webp'
 import zCard1 from '../assets/z/zCard1.webp'
 import zCard2 from '../assets/z/zCard2.webp'
 
+// Cartas trampa imports
+
+import dejameIrCard from '../assets/otros/dejameIrCard.webp'
+import shadowLightsCard from '../assets/otros/shadowLightsCard.webp'
+import boongorCard from '../assets/otros/boongorCard.webp'
+import vuelveCard from '../assets/otros/vuelveCard.webp'
+import libranosCard from '../assets/otros/libranosCard.webp'
+import rebote from '../assets/otros/rebote.webp'
+import itsATrap from '../assets/otros/its-a-trap.webp'
+import kebab from '../assets/otros/kebab.webp'
+import kratosCard from '../assets/otros/kratosCard.webp'
+import tramposilloCard from '../assets/otros/tramposilloCard.webp'
+
 export type CardType = 'basic' | 'habilidad' | 'trap' | 'point'
 
 export interface Carta {
@@ -25,6 +38,7 @@ export interface Carta {
   titulo?: string
   tipo?: string
   habilidad?: string
+  instantanea?: boolean
 }
 
 export const cartasConHabilidad: Carta[] = [
@@ -286,6 +300,113 @@ export const cartasSinHabilidad: Carta[] = [
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     imagen: zCard2,
     cartaTipo: 'basic',
+  },
+]
+
+export const cartasTrampa: Carta[] = [
+  {
+    id: 1,
+    name: 'Trampa',
+    titulo: 'Dejame ir delante, que me mareo',
+    habilidad:
+      'Independientemente de quien tenga la prioridad, tu habilidad se activará primero',
+    imagen: dejameIrCard,
+    cartaTipo: 'trap',
+    instantanea: false,
+  },
+  {
+    id: 3,
+    name: 'Trampa',
+    titulo: 'Shadow ligths',
+    habilidad: 'Transforma tu racha de derrotas en victorias',
+    imagen: shadowLightsCard,
+    cartaTipo: 'trap',
+    instantanea: false,
+  },
+  {
+    id: 4,
+    name: 'Trampa',
+    titulo: 'Boongor',
+    habilidad:
+      'Te permite enfrentarte al que esté en el escalón más alto. Si ganas, subes hasta el mismo escalón. Si ya vas primero, te enfrentas contra el último. Si ganas, subes 1 y no pierdes la racha.',
+    cartaTipo: 'trap',
+    instantanea: true,
+    imagen: boongorCard,
+  },
+  {
+    id: 5,
+    name: 'Trampa',
+    titulo: 'Vuelve a mirar',
+    habilidad: 'Transforma el tipo de tu carta a tu elección',
+    imagen: vuelveCard,
+    cartaTipo: 'trap',
+    instantanea: false,
+  },
+  {
+    id: 6,
+    name: 'Trampa',
+    titulo: 'Un poco tranposillo',
+    habilidad:
+      'Aumenta el número de cartas trampas que puedes usar y la cantidad máxima de cartas que puedes tener en 1.',
+    imagen: tramposilloCard,
+    cartaTipo: 'trap',
+    instantanea: true,
+  },
+  {
+    id: 7,
+    name: 'Trampa',
+    titulo: 'Libranos del mal',
+    habilidad:
+      'Si robas una carta de bajar escalón, puedes usarla para librarte.',
+    imagen: libranosCard,
+    cartaTipo: 'trap',
+    instantanea: false,
+  },
+  {
+    id: 8,
+    name: 'Trampa',
+    titulo: 'Kebab',
+    habilidad: 'Te da la fuerza necesaria para subir un escalón.',
+    imagen: kebab,
+    cartaTipo: 'trap',
+    instantanea: true,
+  },
+  {
+    id: 9,
+    name: 'Trampa',
+    titulo: 'Tobillos de goma',
+    habilidad: 'Bajas un escalón.',
+    imagen: libranosCard,
+    cartaTipo: 'trap',
+    instantanea: true,
+  },
+  {
+    id: 10,
+    name: 'Trampa',
+    titulo: 'Rebote',
+    habilidad: 'Desvía un desafío al jugador con más escalones.',
+    imagen: rebote,
+    cartaTipo: 'trap',
+    instantanea: false,
+  },
+  {
+    id: 11,
+    name: 'Trampa',
+    titulo: 'Its a trap',
+    habilidad: 'Devuelve tus cartas trampa y roba la misma cantidad.',
+    imagen: itsATrap,
+    cartaTipo: 'trap',
+    instantanea: true,
+  },
+  {
+    id: 12,
+    name: 'Trampa',
+    titulo: 'Kratos',
+    habilidad:
+      'Enfrentas a dos jugadores, eliges a uno como tu avatar. Si tu avatar gana, ganas el punto. Si empatan, ambos pierden uno.',
+    imagen: kratosCard,
+    cartaTipo: 'trap',
+    instantanea: true,
   },
 ]
 

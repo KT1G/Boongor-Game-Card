@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import CardsWithAbility from './components/Card/CardsWithAbility'
 import CardBasic from './components/Card/CardBasic'
+import CardsTrap from './components/Card/CardsTrap'
 import Header from './components/Header'
+import { CardType } from './data/cartas'
 
 import {
   main,
@@ -13,17 +15,11 @@ import {
 } from './css/main.css'
 
 function App() {
-  const [displayMode, setDisplayMode] = useState<'basic' | 'ability'>('basic')
+  const [displayMode, setDisplayMode] = useState<CardType>('basic')
 
-  const handleBasicButtonClick = () => {
-    if (displayMode !== 'basic') {
-      setDisplayMode('basic')
-    }
-  }
-
-  const handleAbilityButtonClick = () => {
-    if (displayMode !== 'ability') {
-      setDisplayMode('ability')
+  const handleButtonClick = (mode: CardType) => {
+    if (displayMode !== mode) {
+      setDisplayMode(mode)
     }
   }
   return (
@@ -35,22 +31,30 @@ function App() {
             className={buttonsSwitch}
             type='button'
             disabled={displayMode === 'basic'}
-            onClick={handleBasicButtonClick}
+            onClick={() => handleButtonClick('basic')}
           >
             BASIC
           </button>
           <button
             className={buttonsSwitch}
             type='button'
-            disabled={displayMode === 'ability'}
-            onClick={handleAbilityButtonClick}
+            disabled={displayMode === 'habilidad'}
+            onClick={() => handleButtonClick('habilidad')}
           >
             ABILITY
+          </button>
+          <button
+            className={buttonsSwitch}
+            type='button'
+            disabled={displayMode === 'trap'}
+            onClick={() => handleButtonClick('trap')}
+          >
+            TRAP
           </button>
         </div>
         <div className={borderButtons} />
         <AnimatePresence mode='wait'>
-          {displayMode === 'basic' ? (
+          {displayMode === 'basic' && (
             <motion.div
               key='basic'
               initial={{ opacity: 0, x: -100 }}
@@ -61,7 +65,8 @@ function App() {
             >
               <CardBasic />
             </motion.div>
-          ) : (
+          )}
+          {displayMode === 'habilidad' && (
             <motion.div
               key='ability'
               initial={{ opacity: 0, x: -100 }}
@@ -71,6 +76,18 @@ function App() {
               className={containersCardAnimated}
             >
               <CardsWithAbility />
+            </motion.div>
+          )}
+          {displayMode === 'trap' && (
+            <motion.div
+              key='trap'
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.3 }}
+              className={containersCardAnimated}
+            >
+              <CardsTrap />
             </motion.div>
           )}
         </AnimatePresence>
