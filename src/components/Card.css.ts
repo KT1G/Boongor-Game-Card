@@ -64,7 +64,7 @@ export const containerPersona = style({
   alignItems: 'center',
   height: '4px',
   borderRadius: '10px',
-  fontFamily: 'metrofutura',
+  fontFamily: 'metrofutura , sans-serif , monospace',
   borderWidth: '1px solid ',
 
   '@media': {
@@ -147,7 +147,7 @@ export const descriptionTittle = style({
   margin: 0,
   zIndex: '99',
   textTransform: 'uppercase',
-  fontFamily: 'metrofutura',
+  fontFamily: 'metrofutura , sans-serif , monospace',
   fontWeight: 'bold',
   textAlign: 'center',
   '@media': {
@@ -159,7 +159,7 @@ export const descriptionTittle = style({
 export const descriptionText = style({
   zIndex: '99',
   color: '#e3fffa',
-  fontFamily: font,
+  fontFamily: `${font} sans-serif, monospace`,
   fontSize: '10px',
   fontWeight: '25px',
   '@media': {

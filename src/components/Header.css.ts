@@ -11,7 +11,7 @@ export const header = style({
 })
 
 export const title = style({
-  fontFamily: 'metrofutura',
+  fontFamily: 'metrofutura , sans-serif , monospace',
   marginLeft: ' 3rem',
   color: 'white',
   fontSize: '25px',
