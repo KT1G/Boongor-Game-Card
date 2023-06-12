@@ -27,6 +27,7 @@ export const containerButtons = style({
 export const buttonsSwitch = style({
   backgroundColor: 'transparent',
   fontFamily: font,
+  color: 'white',
   padding: '.4rem',
   letterSpacing: 3,
   border: '1px solid black',
