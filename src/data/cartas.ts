@@ -45,7 +45,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 1,
     name: 'Jason',
-    titulo: 'Jacobo no sabe lo que quiere',
+    titulo: 'No se lo que quiero',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Al final del turno, después de robar, puedes devolver tus cartas al mazo y robar el mismo número.',
@@ -75,7 +75,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 4,
     name: 'Elious',
-    titulo: 'Elías Huevos Caseros',
+    titulo: 'Lo mio es casero',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Si tu oponente utiliza una carta del mismo tipo, ganarás el turno independientemente de la habilidad de tu oponente.',
@@ -85,7 +85,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 5,
     name: 'Elious',
-    titulo: 'Seguro que la pierdo...',
+    titulo: 'Esta la pierdo...',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
       'Si pierdes la mano, aumentas en uno el número de cartas trampa que puedes usar por turno.',
@@ -95,7 +95,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 6,
     name: 'ElKaters',
-    titulo: 'Braian Siempre Tiene Razón',
+    titulo: 'Siempre Tengo Razón',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Anulas la habilidad de tu oponente, si ganas aumenta el número máximo de cartas que puedes tener en la mano en uno.',
@@ -105,7 +105,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 7,
     name: 'ElKaters',
-    titulo: 'Braian Todo lo Sabe',
+    titulo: 'A ver dejame ver...',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Puedes ver 2 cartas a tu elección de la mano de tu oponente, si ganas la ronda puedes quedarte una de ellas o robar una carta extra este turno.',
@@ -115,7 +115,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 8,
     name: 'Chomi',
-    titulo: 'Lucas Policía',
+    titulo: 'Quietitas las manos',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
     habilidad:
       'Tu rival no podrá robar carta el siguiente turno, en caso de perder la ronda robas 2 cartas extra.',
@@ -185,7 +185,7 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 15,
     name: 'Magnum',
-    titulo: 'Felix, Maestro del caos',
+    titulo: 'Maestro del caos',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
       'Obligas a intercambiar las cartas de la mano de tu oponente con las tuyas al final del turno, el intercambio será equivalente al número de cartas del jugador que tenga menos, si ganas puedes hacer un intercambio completo, independientemente de la diferencia de cartas entre ambos.',
@@ -337,7 +337,7 @@ export const cartasTrampa: Carta[] = [
     id: 5,
     name: 'Trampa',
     titulo: 'Vuelve a mirar',
-    habilidad: 'Transforma el tipo de tu carta a tu elección',
+    habilidad: 'Transforma el tipo de tu carta en la de tu adversario',
     imagen: vuelveCard,
     cartaTipo: 'trap',
     instantanea: false,
