@@ -1,5 +1,5 @@
-import { Carta } from '../../data/cartas'
-import { card, image, imageBasic} from './Card.css'
+import { CardTypeEnum, Carta } from '../../data/cartas'
+import { card, image, imageBasic } from './Card.css'
 import CardBody from './CardBody'
 import CardHeader from './CardHeader'
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Card = ({ carta }: Props) => {
-  const cssImage = carta.cartaTipo === 'basic' ? imageBasic : image
+  const cssImage = carta.cartaTipo === CardTypeEnum.BASIC ? imageBasic : image
   return (
     <article className={card}>
       <CardHeader

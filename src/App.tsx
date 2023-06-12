@@ -4,57 +4,57 @@ import CardsWithAbility from './components/Card/CardsWithAbility'
 import CardBasic from './components/Card/CardBasic'
 import CardsTrap from './components/Card/CardsTrap'
 import Header from './components/Header'
-import { CardType } from './data/cartas'
+import { CardType, CardTypeEnum } from './data/cartas'
 
 import {
   main,
-  buttonsSwitch,
   containersCardAnimated,
   containerButtons,
 } from './css/main.css'
 import BorderBottom from './components/Comun/BorderBottom'
+import Rules from './components/Rules'
+import ButtonsList from './components/ButtonsList'
 
 function App() {
-  const [displayMode, setDisplayMode] = useState<CardType>('habilidad')
+  const [displayMode, setDisplayMode] = useState<CardType>(CardTypeEnum.ABILITY)
+  const [animationInProgress, setEffectInProgress] = useState(false)
 
   const handleButtonClick = (mode: CardType) => {
     if (displayMode !== mode) {
+      setEffectInProgress(true)
       setDisplayMode(mode)
     }
+  }
+
+  const transitionEnds = () => {
+    setEffectInProgress(false)
   }
   return (
     <>
       <Header />
       <main className={main}>
         <div className={containerButtons}>
-          <button
-            className={buttonsSwitch}
-            type='button'
-            disabled={displayMode === 'basic'}
-            onClick={() => handleButtonClick('basic')}
-          >
-            BASIC
-          </button>
-          <button
-            className={buttonsSwitch}
-            type='button'
-            disabled={displayMode === 'habilidad'}
-            onClick={() => handleButtonClick('habilidad')}
-          >
-            ABILITY
-          </button>
-          <button
-            className={buttonsSwitch}
-            type='button'
-            disabled={displayMode === 'trap'}
-            onClick={() => handleButtonClick('trap')}
-          >
-            TRAP
-          </button>
+          <ButtonsList
+            handleButtonClick={handleButtonClick}
+            displayMode={displayMode}
+            animationInProgress={animationInProgress}
+          />
         </div>
         <BorderBottom />
-        <AnimatePresence mode='wait'>
-          {displayMode === 'basic' && (
+        <AnimatePresence mode='wait' onExitComplete={transitionEnds}>
+          {displayMode === CardTypeEnum.RULES && (
+            <motion.div
+              key='rules'
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.3 }}
+              className={containersCardAnimated}
+            >
+              <Rules />
+            </motion.div>
+          )}
+          {displayMode === CardTypeEnum.BASIC && (
             <motion.div
               key='basic'
               initial={{ opacity: 0, x: -100 }}
@@ -66,9 +66,9 @@ function App() {
               <CardBasic />
             </motion.div>
           )}
-          {displayMode === 'habilidad' && (
+          {displayMode === CardTypeEnum.ABILITY && (
             <motion.div
-              key='ability'
+              key='habilidad'
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
@@ -78,7 +78,7 @@ function App() {
               <CardsWithAbility />
             </motion.div>
           )}
-          {displayMode === 'trap' && (
+          {displayMode === CardTypeEnum.TRAP && (
             <motion.div
               key='trap'
               initial={{ opacity: 0, x: -100 }}

@@ -37,9 +37,14 @@ export const buttonsSwitch = style({
     transition: '.4s ease-in-out',
     backgroundColor: 'hsl(0, 0%, 9%)',
   },
-  ':disabled': {
-    backgroundColor: '#f7f7f7',
-    color: 'black', // Cambiar el color de texto según necesites,
+})
+
+export const buttonSelected = style({
+  background: 'white',
+  color: 'black',
+  ':hover': {
+    background: 'white',
+    color: 'black',
     cursor: 'auto',
   },
 })
