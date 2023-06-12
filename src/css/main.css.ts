@@ -1,8 +1,7 @@
 import { style } from '@vanilla-extract/css'
-import { font } from '../text.css'
 
 export const main = style({
-  fontFamily: font,
+  fontFamily: 'Metrofutura',
   height: '100%',
   margin: 'auto',
   marginTop: '3rem',
@@ -26,7 +25,7 @@ export const containerButtons = style({
 
 export const buttonsSwitch = style({
   backgroundColor: 'transparent',
-  fontFamily: font,
+  fontFamily: 'Lol',
   color: 'white',
   padding: '.4rem',
   letterSpacing: 3,

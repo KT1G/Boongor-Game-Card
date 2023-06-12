@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { font } from '../../text.css'
+
 
 // HEADER
 export const card = style({
@@ -81,6 +81,7 @@ export const containerName = style({
 
 export const textName = style({
   position: 'relative',
+  fontFamily: 'Lol, sans-serif',
   textTransform: 'uppercase',
   letterSpacing: '2px',
   fontSize: '8px',
@@ -230,7 +231,7 @@ export const descriptionTittle = style({
 export const descriptionText = style({
   zIndex: '99',
   color: '#e3fffa',
-  fontFamily: font,
+  fontFamily: 'Lol, sans-serif',
   fontSize: '10px',
   fontWeight: '25px',
   '@media': {

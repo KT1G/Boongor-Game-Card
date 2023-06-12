@@ -184,7 +184,7 @@ export const cartasConHabilidad: Carta[] = [
   },
   {
     id: 15,
-    name: 'MagnumZRare',
+    name: 'Magnum',
     titulo: 'Felix, Maestro del caos',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     habilidad:
@@ -194,7 +194,7 @@ export const cartasConHabilidad: Carta[] = [
   },
   {
     id: 16,
-    name: 'MagnumZRare',
+    name: 'Magnum',
     titulo: 'El poder del cabello nasal',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     habilidad:
