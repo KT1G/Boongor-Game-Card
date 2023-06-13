@@ -30,13 +30,11 @@ const Rules = () => {
       <p>- Carta trampa:</p>
       <ul>
         <li>
-          <span>Instantánea</span>: Se puede usar en cualquier momento de tu
-          turno o cuando alguien te reta.
+          <span>Instantánea</span>: Se activan al robarlas del mazo.
         </li>
         <li>
-          <span>Trampa</span>: Se coloca sobre la mesa y se activa según las
-          circunstancias definidas en la carta. Puedes tener un máximo de dos
-          cartas trampa en la mesa y puedes reemplazarlas durante tu turno.
+          <span>libre</span>: Se puede usar en cualquier momento de tu turno o
+          cuando te desafien.
         </li>
       </ul>
 
@@ -69,11 +67,13 @@ const Rules = () => {
         siempre se activará primero la habilidad del retador.
       </p>
       <p>- En caso de empate, no cuenta para la racha.</p>
+      <p>- En caso de empate, no cuenta para la racha.</p>
+
       <p>
-        - Cada vez que un jugador gane una ronda, la carta con la que ganó
-        permanecerá en la mesa para indicar que el jugador está en racha. Cuando
-        se suba un escalón o se pierda la racha, las cartas se devolverán a la
-        parte inferior del mazo.
+        - Cada vez que un jugador gane o pierda una ronda, la carta con la que
+        jugó permanecerá en la mesa para indicar que el jugador está en racha.
+        Cuando la racha se cancele, las cartas se devolverán a la parte inferior
+        del mazo. (opcional)
       </p>
     </section>
   )

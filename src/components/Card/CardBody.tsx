@@ -3,15 +3,24 @@ import BorderBottom from '../Comun/BorderBottom'
 import { description, descriptionTittle, descriptionText } from './Card.css'
 
 interface Props {
-  title?: Carta['titulo']
-  ability?: Carta['habilidad']
+  title?: Carta['title']
+  ability?: Carta['ability']
+  isEpic?: Carta['isEpic']
 }
 
-const CardBody = ({ title = '', ability = '' }: Props) => {
+const CardBody = ({ title = '', ability = '', isEpic }: Props) => {
+  const colorTitleWhenEpic = isEpic != null ? '#ffefaa' : ''
   return (
     <section className={description}>
-      <h3 className={descriptionTittle}>{title}</h3>
-      {title !== "" && <BorderBottom />}
+      <h3
+        style={{
+          color: colorTitleWhenEpic,
+        }}
+        className={descriptionTittle}
+      >
+        {title}
+      </h3>
+      {title !== '' && <BorderBottom />}
       <p className={descriptionText}>{ability}</p>
     </section>
   )

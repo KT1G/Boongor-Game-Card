@@ -9,21 +9,24 @@ import {
 } from './Card.css'
 
 interface Props {
+  type: Carta['cartaTipo']
   name?: Carta['name']
   typeDamage?: Carta['tipo']
-  type: Carta['cartaTipo']
+  instantanea?: Carta['instantanea']
 }
 
-const CardHeader = ({ name, typeDamage, type }: Props) => {
+const CardHeader = ({ name, typeDamage, type, instantanea }: Props) => {
   const cssTipoImage =
     type === CardTypeEnum.ABILITY
       ? tipoContainerWithAbility
       : tipoContainerWithoutAbility
   const isBasicCard = type === CardTypeEnum.BASIC
   const colorTrap = type === CardTypeEnum.TRAP ? 'hsl(0, 100%, 20%)' : ''
+  const isInstantanea = type === CardTypeEnum.TRAP && instantanea === true
+
   return (
     <header className={header}>
-      {!isBasicCard && (
+      {!isBasicCard && !isInstantanea && (
         <div
           style={{
             background: colorTrap,

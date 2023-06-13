@@ -9,16 +9,30 @@ interface Props {
 
 const Card = ({ carta }: Props) => {
   const cssImage = carta.cartaTipo === CardTypeEnum.BASIC ? imageBasic : image
+  const borderColorWhenEpic = carta.isEpic != null ? '7px solid #ffefaa' : ''
+  const backgroundColorWhenEpic = carta.isEpic != null ? '#ffefaa' : ''
+
   return (
-    <article className={card}>
+    <article
+      style={{
+        border: borderColorWhenEpic,
+        background: backgroundColorWhenEpic,
+      }}
+      className={card}
+    >
       <CardHeader
         name={carta.name}
         typeDamage={carta.tipo}
         type={carta.cartaTipo}
+        instantanea={carta.instantanea}
       />
-      <CardBody title={carta.titulo} ability={carta.habilidad} />
+      <CardBody
+        title={carta.title}
+        ability={carta.ability}
+        isEpic={carta.isEpic}
+      />
 
-      <img className={cssImage} src={carta.imagen} />
+      <img alt={carta.name} className={cssImage} src={carta.imagen} />
     </article>
   )
 }

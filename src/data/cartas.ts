@@ -42,19 +42,20 @@ export interface Carta {
   cartaTipo: CardType
   imagen: string
   name?: string
-  titulo?: string
+  title?: string
   tipo?: string
-  habilidad?: string
+  ability?: string
   instantanea?: boolean
+  isEpic?: boolean
 }
 
 export const cartasConHabilidad: Carta[] = [
   {
     id: 1,
     name: 'Jason',
-    titulo: 'No se lo que quiero',
+    title: 'No se lo que quiero',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
-    habilidad:
+    ability:
       'Al final del turno, después de robar, puedes devolver tus cartas al mazo y robar el mismo número.',
     imagen: jacoCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -62,9 +63,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 2,
     name: 'Oso',
-    titulo: 'Oso Rapero',
+    title: 'Oso Rapero',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
-    habilidad:
+    ability:
       'Si la última palabra de la descripción de tu oponente acaba en vocal, si ganas el turno sumarás un punto extra a la racha.',
     imagen: osoCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -72,9 +73,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 3,
     name: 'Oso',
-    titulo: 'Oso Hambriento',
+    title: 'Oso Hambriento',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
-    habilidad:
+    ability:
       'Obligas a tu oponente a desechar una de sus cartas, si ganas este turno la carta vuelve a tu mano.',
     imagen: osoCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -82,9 +83,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 4,
     name: 'Elious',
-    titulo: 'Lo mio es casero',
+    title: 'Lo mio es casero',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
-    habilidad:
+    ability:
       'Si tu oponente utiliza una carta del mismo tipo, ganarás el turno independientemente de la habilidad de tu oponente.',
     imagen: eliasCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -92,9 +93,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 5,
     name: 'Elious',
-    titulo: 'Esta la pierdo...',
+    title: 'Esta la pierdo...',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
-    habilidad:
+    ability:
       'Si pierdes la mano, aumentas en uno el número de cartas trampa que puedes usar por turno.',
     imagen: eliasCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -102,9 +103,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 6,
     name: 'ElKaters',
-    titulo: 'Siempre Tengo Razón',
+    title: 'Siempre Tengo Razón',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
-    habilidad:
+    ability:
       'Anulas la habilidad de tu oponente, si ganas aumenta el número máximo de cartas que puedes tener en la mano en uno.',
     imagen: braianCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -112,9 +113,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 7,
     name: 'ElKaters',
-    titulo: 'A ver dejame ver...',
+    title: 'A ver dejame ver...',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
-    habilidad:
+    ability:
       'Puedes ver 2 cartas a tu elección de la mano de tu oponente, si ganas la ronda puedes quedarte una de ellas o robar una carta extra este turno.',
     imagen: braianCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -122,9 +123,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 8,
     name: 'Chomi',
-    titulo: 'Quietitas las manos',
+    title: 'Quietitas las manos',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
-    habilidad:
+    ability:
       'Tu rival no podrá robar carta el siguiente turno, en caso de perder la ronda robas 2 cartas extra.',
     imagen: chomsCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -132,9 +133,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 9,
     name: 'Chomi',
-    titulo: 'Iguales ante la Ley',
+    title: 'Iguales ante la Ley',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
-    habilidad:
+    ability:
       'En caso de empate robas una carta extra durante los 3 próximos turnos.',
     imagen: chomsCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -142,9 +143,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 10,
     name: 'Yurch',
-    titulo: 'Jorgiña',
+    title: 'Jorgiña',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
-    habilidad:
+    ability:
       'Copias la habilidad de la carta de tu oponente que acaba de usar este turno. Si la carta no tiene habilidad y pierdes, anulas tu racha de derrotas.',
     imagen: jorgeCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -152,9 +153,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 11,
     name: 'Yurch',
-    titulo: 'Como Pez en el Agua',
+    title: 'Como Pez en el Agua',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
-    habilidad:
+    ability:
       'Anulas cualquier carta trampa que tu oponente pueda activar esta ronda, no se puede cancelar su efecto.',
     imagen: jorgeCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -162,9 +163,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 12,
     name: 'Jason',
-    titulo: 'Vigorizador',
+    title: 'Vigorizador',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg',
-    habilidad:
+    ability:
       'Duplica el efecto de tu siguiente carta de Desafío si tu habilidad se activa primero y no empatas esta ronda, permanecerá en la mesa hasta que se aplique su efecto.',
     imagen: jacoCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -172,9 +173,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 13,
     name: 'Alexito',
-    titulo: 'ALL-IN',
+    title: 'ALL-IN',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
-    habilidad:
+    ability:
       'Si ganas este turno, subes 2 escalones; si pierdes, bajas uno. Se resetea la racha de victorias o derrotas.',
     imagen: alexitoCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -182,9 +183,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 14,
     name: 'Alexito',
-    titulo: 'Ratatata',
+    title: 'Ratatata',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
-    habilidad:
+    ability:
       'Puedes desafiar a dos oponentes diferentes en este turno. Juega una carta de desafío contra cada uno y resuelve los enfrentamientos por separado. Si ganas ambos enfrentamientos, subes 1 escalón. Tu racha de victorias no se ve afectada.',
     imagen: alexitoCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -192,9 +193,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 15,
     name: 'Magnum',
-    titulo: 'Maestro del caos',
+    title: 'Maestro del caos',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
-    habilidad:
+    ability:
       'Obligas a intercambiar las cartas de la mano de tu oponente con las tuyas al final del turno, el intercambio será equivalente al número de cartas del jugador que tenga menos, si ganas puedes hacer un intercambio completo, independientemente de la diferencia de cartas entre ambos.',
     imagen: zCard1,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -202,9 +203,9 @@ export const cartasConHabilidad: Carta[] = [
   {
     id: 16,
     name: 'Magnum',
-    titulo: 'El poder del cabello nasal',
+    title: 'El poder del cabello nasal',
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
-    habilidad:
+    ability:
       'Elige una carta de tu oponente de forma aleatoria, si es una carta trampa, la descartas y ganas el turno. Si ya ganabas, sumas un punto extra a la racha.',
     imagen: zCard2,
     cartaTipo: CardTypeEnum.ABILITY,
@@ -314,8 +315,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 1,
     name: 'Trampa',
-    titulo: 'Dejame ir delante',
-    habilidad:
+    title: 'Dejame ir delante',
+    ability:
       'Independientemente de quien tenga la prioridad, tu habilidad se activará primero',
     imagen: dejameIrCard,
     cartaTipo: CardTypeEnum.TRAP,
@@ -324,27 +325,29 @@ export const cartasTrampa: Carta[] = [
   {
     id: 3,
     name: 'Trampa',
-    titulo: 'Shadow ligths',
-    habilidad: 'Transforma tu racha de derrotas en victorias',
+    title: 'Shadow ligths',
+    ability: 'Transforma tu racha de derrotas en victorias',
     imagen: shadowLightsCard,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: false,
+    isEpic: true,
   },
   {
     id: 4,
     name: 'Trampa',
-    titulo: 'Boongor',
-    habilidad:
-      'Te permite enfrentarte al que esté en el escalón más alto. Si ganas, subes hasta el mismo escalón. Si ya vas primero, te enfrentas contra el último. Si ganas, subes 1 y no pierdes la racha.',
+    title: 'Boongor',
+    ability:
+      'Te permite enfrentarte al que esté en el escalón más alto. Si ganas, subes hasta el mismo escalón. Si ya vas primero, te enfrentas contra el último. Si ganas, subes 1 y no pierdes la racha. Solo se puede usar al principio de tu turno',
     cartaTipo: CardTypeEnum.TRAP,
-    instantanea: true,
+    instantanea: false,
     imagen: boongorCard,
+    isEpic: true,
   },
   {
     id: 5,
     name: 'Trampa',
-    titulo: 'Vuelve a mirar',
-    habilidad: 'Transforma el tipo de tu carta en la de tu adversario',
+    title: 'Vuelve a mirar',
+    ability: 'Transforma el tipo de tu carta en la de tu adversario',
     imagen: vuelveCard,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: false,
@@ -352,8 +355,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 6,
     name: 'Trampa',
-    titulo: 'Un poco tranposillo',
-    habilidad:
+    title: 'Un poco tranposillo',
+    ability:
       'Aumenta el número de cartas trampas que puedes usar y la cantidad máxima de cartas que puedes tener en 1.',
     imagen: tramposilloCard,
     cartaTipo: CardTypeEnum.TRAP,
@@ -362,8 +365,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 7,
     name: 'Trampa',
-    titulo: 'Libranos del mal',
-    habilidad:
+    title: 'Libranos del mal',
+    ability:
       'Si robas una carta de bajar escalón, puedes usarla para librarte.',
     imagen: libranosCard,
     cartaTipo: CardTypeEnum.TRAP,
@@ -372,8 +375,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 8,
     name: 'Trampa',
-    titulo: 'Kebab',
-    habilidad: 'Te da la fuerza necesaria para subir un escalón.',
+    title: 'Kebab',
+    ability: 'Te da la fuerza necesaria para subir un escalón.',
     imagen: kebab,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: true,
@@ -381,8 +384,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 9,
     name: 'Trampa',
-    titulo: 'Tobillos de goma',
-    habilidad: 'Bajas un escalón.',
+    title: 'Tobillos de goma',
+    ability: 'Bajas un escalón.',
     imagen: libranosCard,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: true,
@@ -390,8 +393,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 10,
     name: 'Trampa',
-    titulo: 'Rebote',
-    habilidad: 'Desvía un desafío al jugador con más escalones.',
+    title: 'Rebote',
+    ability: 'Desvía un desafío al jugador con más escalones.',
     imagen: rebote,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: false,
@@ -399,8 +402,8 @@ export const cartasTrampa: Carta[] = [
   {
     id: 11,
     name: 'Trampa',
-    titulo: 'Its a trap',
-    habilidad: 'Devuelve tus cartas trampa y roba la misma cantidad.',
+    title: 'Its a trap',
+    ability: 'Devuelve tus cartas trampa y roba la misma cantidad.',
     imagen: itsATrap,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: true,
@@ -408,12 +411,12 @@ export const cartasTrampa: Carta[] = [
   {
     id: 12,
     name: 'Trampa',
-    titulo: 'Kratos',
-    habilidad:
-      'Enfrentas a dos jugadores, eliges a uno como tu avatar. Si tu avatar gana, ganas el punto. Si empatan, ambos pierden uno.',
+    title: 'Kratos',
+    ability:
+      'Enfrentas a dos jugadores, eliges a uno como tu avatar. Si tu avatar gana, ganas el punto. Si empatan, ambos pierden uno. solo puedes usarla al principio de tu turno. Puedes desafiar a otro jugador a mayores si lo deseas ',
     imagen: kratosCard,
     cartaTipo: CardTypeEnum.TRAP,
-    instantanea: true,
+    instantanea: false,
   },
 ]
 
