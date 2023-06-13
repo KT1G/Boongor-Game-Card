@@ -1,15 +1,15 @@
-import { buttonsSwitch, buttonSelected } from '../css/main.css'
-import { CardType } from '../data/cartas'
+import { buttons } from '../../constants/constants'
+import { buttonsSwitch, buttonSelected } from '../../css/main.css'
+import { CardType } from '../../data/cartas'
 
 interface Props {
-  handleButtonClick: (mode: CardType) => void
+  handleClick: (mode: CardType) => void
   displayMode: CardType
   animationInProgress: boolean
 }
 
-const buttons = ['RULES', 'BASIC', 'ABILITY', 'TRAP']
 const ButtonsList = ({
-  handleButtonClick,
+  handleClick,
   displayMode,
   animationInProgress,
 }: Props) => {
@@ -22,7 +22,7 @@ const ButtonsList = ({
         className={`${buttonsSwitch} ${selected ? buttonSelected : ''}`}
         type='button'
         disabled={selected || animationInProgress}
-        onClick={() => handleButtonClick(button as CardType)}
+        onClick={() => handleClick(button as CardType)}
       >
         {button}
       </button>
