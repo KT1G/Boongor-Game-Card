@@ -46,7 +46,6 @@ function App() {
     setEffectInProgress(false)
   }
 
-  console.log(isMenuOpen)
 
   return (
     <>
