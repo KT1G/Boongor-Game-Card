@@ -18,7 +18,7 @@ function App() {
       setDisplayMode(mode)
     }
   }
-  const handleCheckboxClick = (event: any) => {
+  const handleCheckboxClick = (event: React.MouseEvent<HTMLInputElement>) => {
     setMenuOpen(!isMenuOpen)
     event.stopPropagation()
   }
@@ -26,8 +26,7 @@ function App() {
     const handleOutsideClick = (event: MouseEvent) => {
       const targetElement = event.target as HTMLElement
       if (
-        sidebarRef.current !== null &&
-        sidebarRef.current !== undefined &&
+        sidebarRef.current != null &&
         !sidebarRef.current.contains(event.target as Node) &&
         targetElement.tagName !== 'LABEL'
       ) {
@@ -45,7 +44,6 @@ function App() {
   const transitionEnds = () => {
     setEffectInProgress(false)
   }
-
 
   return (
     <>
