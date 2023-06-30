@@ -30,7 +30,6 @@ import tramposilloCard from '../assets/otros/tramposilloCard.webp'
 
 // Cartas puntos
 
-import cardPoint1 from '../assets/points/escalon1.webp'
 import cardPoint2 from '../assets/points/escalon2.webp'
 import cardPoint3 from '../assets/points/escalon3.webp'
 import cardPoint4 from '../assets/points/escalon4.webp'
