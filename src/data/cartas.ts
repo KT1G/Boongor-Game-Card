@@ -28,6 +28,19 @@ import kebab from '../assets/otros/kebab.webp'
 import kratosCard from '../assets/otros/kratosCard.webp'
 import tramposilloCard from '../assets/otros/tramposilloCard.webp'
 
+// Cartas puntos
+
+import cardPoint1 from '../assets/points/escalon1.webp'
+import cardPoint2 from '../assets/points/escalon2.webp'
+import cardPoint3 from '../assets/points/escalon3.webp'
+import cardPoint4 from '../assets/points/escalon4.webp'
+import cardPoint5 from '../assets/points/escalon5.webp'
+import cardPoint6 from '../assets/points/escalon6.webp'
+import cardPoint7 from '../assets/points/escalon7.webp'
+import points1 from '../assets/points/points1.webp'
+import points2 from '../assets/points/points2.webp'
+import points4 from '../assets/points/points4.webp'
+
 export type CardType = 'RULES' | 'BASIC' | 'ABILITY' | 'TRAP' | 'POINT'
 export enum CardTypeEnum {
   RULES = 'RULES',
@@ -417,6 +430,51 @@ export const cartasTrampa: Carta[] = [
     imagen: kratosCard,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: false,
+  },
+]
+
+export const cartasPuntos: Carta[] = [
+  {
+    id: 1,
+    tipo: points1,
+    name: 'ESCALÓN',
+    imagen: cardPoint2,
+    cartaTipo: CardTypeEnum.POINT,
+  },
+  {
+    id: 2,
+    tipo: points2,
+    name: 'ESCALÓN',
+    imagen: cardPoint3,
+    cartaTipo: CardTypeEnum.POINT,
+  },
+  {
+    id: 3,
+    tipo: points4,
+    name: 'ESCALÓN',
+    imagen: cardPoint4,
+    cartaTipo: CardTypeEnum.POINT,
+  },
+  {
+    id: 4,
+    tipo: points1,
+    name: 'ESCALÓN',
+    imagen: cardPoint5,
+    cartaTipo: CardTypeEnum.POINT,
+  },
+  {
+    id: 5,
+    tipo: points2,
+    name: 'ESCALÓN',
+    imagen: cardPoint6,
+    cartaTipo: CardTypeEnum.POINT,
+  },
+  {
+    id: 6,
+    tipo: points4,
+    name: 'ESCALÓN',
+    imagen: cardPoint7,
+    cartaTipo: CardTypeEnum.POINT,
   },
 ]
 

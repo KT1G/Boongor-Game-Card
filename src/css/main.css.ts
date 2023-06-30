@@ -4,7 +4,7 @@ export const main = style({
   fontFamily: 'Metrofutura',
   height: '100%',
   margin: 'auto',
-  marginTop: '3rem',
+  marginTop: '7rem',
   width: 'clamp(200px, 90%, 1000px)',
   display: 'flex',
   alignItems: 'center',
@@ -12,23 +12,30 @@ export const main = style({
   flexDirection: 'column',
   gap: '1rem',
   '@media': {
-    'screen and (max-width: 800px)': {},
+    'screen and (max-width: 800px)': {
+      flexDirection: 'column', // Cambia la dirección de la columna en dispositivos móviles
+    },
   },
 })
 
-// buttons
-
 export const containerButtons = style({
   display: 'flex',
-  gap: '2rem',
+  gap: '3rem',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      display: 'none',// Oculta el contenedor de botones en dispositivos móviles
+    }
+  },
 })
+
 
 export const buttonsSwitch = style({
   backgroundColor: 'transparent',
   fontFamily: 'Lol',
   color: 'white',
   padding: '.4rem',
-  letterSpacing: 3,
+  letterSpacing: 4,
+  fontSize: '14px',
   border: '1px solid black',
   cursor: 'pointer',
   borderRadius: '7px',
@@ -36,6 +43,12 @@ export const buttonsSwitch = style({
     border: '1px solid hsl(0, 0%, 29%)',
     transition: '.4s ease-in-out',
     backgroundColor: 'hsl(0, 0%, 9%)',
+  },
+  '@media': {
+    'screen and (max-width: 800px)': {
+      // Oculta el contenedor de botones en dispositivos móviles
+      fontSize: '18px',
+    },
   },
 })
 
@@ -59,10 +72,10 @@ export const borderBottom = style({
     ' radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(254,254,254,1) 0%, rgba(255,255,255,0) 100%)',
 })
 
-// Container cardsAnimations
 export const containersCardAnimated = style({
   display: 'flex',
   flexWrap: 'wrap',
+  width: '100%',
   alignItems: 'center',
   justifyContent: 'center',
   gap: '2rem',

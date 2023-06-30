@@ -1,1 +1,1 @@
-export const buttons = ['RULES', 'BASIC', 'ABILITY', 'TRAP']
+export const buttons = ['RULES', 'BASIC', 'ABILITY', 'TRAP','POINT']

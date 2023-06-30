@@ -26,22 +26,24 @@ const CardHeader = ({ name, typeDamage, type, instantanea }: Props) => {
 
   return (
     <header className={header}>
-      {!isBasicCard && !isInstantanea && (
-        <div
-          style={{
-            background: colorTrap,
-            color: 'white',
-          }}
-          className={containerName}
-        >
-          <p className={textName}>{name}</p>
-        </div>
-      )}
-      {typeDamage != null && (
-        <div className={cssTipoImage}>
-          <img className={tipoDamageWithAbility} src={typeDamage} />
-        </div>
-      )}
+      <div className='capture-card-header'>
+        {!isBasicCard && !isInstantanea && (
+          <div
+            style={{
+              background: colorTrap,
+              color: 'white',
+            }}
+            className={containerName}
+          >
+            <p className={textName}>{name}</p>
+          </div>
+        )}
+        {typeDamage != null && (
+          <div className={cssTipoImage}>
+            <img className={tipoDamageWithAbility} src={typeDamage} />
+          </div>
+        )}
+      </div>
     </header>
   )
 }

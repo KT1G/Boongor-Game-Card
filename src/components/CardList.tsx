@@ -1,10 +1,10 @@
-
 import { motion, AnimatePresence } from 'framer-motion'
 import CardBasic from '../components/Card/CardBasic'
 import { buttons } from '../constants/constants'
 import Rules from './Rules'
 import CardsWithAbility from './Card/CardsWithAbility'
 import CardsTrap from './Card/CardsTrap'
+import CardPoints from './Card/CardPoints'
 import { containersCardAnimated } from '../css/main.css'
 import { CardType } from '../data/cartas'
 
@@ -19,7 +19,7 @@ export const CardList = ({ transitionEnds, displayMode }: Props) => {
     BASIC: <CardBasic />,
     ABILITY: <CardsWithAbility />,
     TRAP: <CardsTrap />,
-    POINT: null,
+    POINT: <CardPoints />,
   }
   return (
     <AnimatePresence mode='wait' onExitComplete={transitionEnds}>

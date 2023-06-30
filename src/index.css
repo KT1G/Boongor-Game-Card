@@ -15,16 +15,117 @@
 }
 * {
   margin: 0px;
+  box-sizing: border-box;
 }
 
 h2 {
   color: white;
 }
 
-  
 p,
 li {
   font-size: 14px;
   color: #f3f1f1dc;
   font-family: 'Lol';
+}
+
+:root {
+  --bar-width: 2rem;
+  --bar-height: 3px;
+  --hamburger-gap: 6px;
+  --foreground: white;
+  --background: #111111;
+  --hamburguer-margin: 1.73rem;
+  --hamburguer-margin2: 2rem;
+  --animation--timing: 150ms ease-in-out;
+  --hamburguer--height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburgerMenu {
+  --x--width: calc(var(--hamburguer--height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  cursor: pointer;
+  gap: var(--hamburger-gap);
+  top: var(--hamburguer-margin);
+  left: var(--hamburguer-margin2);
+  z-index: 999;
+}
+
+.hamburgerMenu:before,
+.hamburgerMenu:after,
+.hamburgerMenu input {
+  content: '';
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: rgb(255, 255, 255);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation--timing), width var(--animation--timing),
+    rotate var(--animation--timing), translate var(--animation--timing);
+  box-shadow: 0 0 0 2px rgb(43, 36, 23) ;
+}
+
+.hamburgerMenu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x--width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+.hamburgerMenu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x--width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburgerMenu input {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburgerMenu input:checked {
+  width: 0;
+  opacity: 0;
+}
+.sidebar {
+  position: fixed;
+  left: var(--hamburguer-margin );
+  top: var(--hamburguer-margin2);
+}
+
+.sidebar {
+  transition: translate var(--animation--timing);
+  translate: -100%;
+  margin-left: -2rem;
+  padding-top: 10rem;
+  z-index: 99;
+  right: -80px;
+  background-color: var(--background);
+  max-width: 13rem;
+  min-height: 100vh;
+  padding: 0.5rem 2rem;
+}
+
+.hamburgerMenu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+.navBarMobile {
+  margin-top: 15rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBarMobile > button {
+  border: none;
+}
+
+@media screen and (min-width: 800px) {
+  .hamburgerMenu {
+    display: none;
+  }
 }

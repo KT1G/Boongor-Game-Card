@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css'
 
-
 // HEADER
 export const card = style({
   position: 'relative',
@@ -56,8 +55,8 @@ export const header = style({
 
 export const containerName = style({
   position: 'relative',
-  minWidth: '3rem',
-  padding: '.3rem',
+  minWidth: '3.4rem',
+  padding: '.2rem .5rem',
   marginTop: '3px',
   background:
     'linear-gradient(0deg, rgba(11,11,11,1) 0%, rgba(38,38,38,1) 49%, rgba(33,32,33,1) 100%)',
@@ -66,15 +65,14 @@ export const containerName = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '4px',
+  height: '10px',
   borderRadius: '10px',
   fontFamily: 'metrofutura , sans-serif , monospace',
-  borderWidth: '1px solid ',
 
   '@media': {
     'screen and (max-width: 500px)': {
-      width: '5rem',
-      height: '.7rem',
+      minWidth: '5rem',
+      height: '1rem',
     },
   },
 })
@@ -84,7 +82,7 @@ export const textName = style({
   fontFamily: 'Lol, sans-serif',
   textTransform: 'uppercase',
   letterSpacing: '2px',
-  fontSize: '8px',
+  fontSize: '7px',
   textAlign: 'center',
   '@media': {
     'screen and (max-width: 500px)': {
@@ -95,8 +93,8 @@ export const textName = style({
 
 export const tipoContainerWithoutAbility = style({
   position: 'absolute',
-  top: '9rem',
-  left: '3.1rem',
+  top: '8rem',
+  left: '2.5rem',
   height: '100px',
   width: '100px',
   borderRadius: '50%',
@@ -114,16 +112,16 @@ export const tipoContainerWithoutAbility = style({
   '@media': {
     'screen and (max-width: 800px)': {
       position: 'absolute',
-      top: '11rem',
-      left: '4.3rem',
+      top: '10rem',
+      left: '3.7rem',
       height: '100px',
       width: '100px',
       borderRadius: '50%',
     },
     'screen and (max-width: 650px)': {
       position: 'absolute',
-      top: '9rem',
-      left: '2.9rem',
+      top: '7.3rem',
+      left: '2.5rem',
       height: '100px',
       width: '100px',
       borderRadius: '50%',
@@ -162,9 +160,8 @@ export const tipoContainerWithoutAbility = style({
 
 export const tipoContainerWithAbility = style({
   position: 'absolute',
-  height: '20px',
-  width: '20px',
-  padding: '6px',
+  height: '35px',
+  width: '35px',
   borderBottomLeftRadius: '7px',
   display: 'flex',
   justifyContent: 'center',
@@ -184,13 +181,13 @@ export const tipoContainerWithAbility = style({
 export const tipoDamageWithAbility = style({
   position: 'absolute',
   objectFit: 'contain',
-  right: 3,
+  right: 5,
   objectPosition: 'center',
-  width: '70%',
-  height: '80%',
+  width: '65%',
+  height: '70%',
   '@media': {
     'screen and (max-width: 500px)': {
-      left: '15px',
+      left: '10px',
       width: '60%',
     },
   },

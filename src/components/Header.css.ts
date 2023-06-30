@@ -1,6 +1,10 @@
 import { style } from '@vanilla-extract/css'
 
 export const header = style({
+  position: 'fixed',
+  width: '100%',
+  top: '0',
+  zIndex: 999,
   display: 'flex',
   height: '5rem',
   padding: '0.5rem',
@@ -16,8 +20,13 @@ export const header = style({
 
 export const title = style({
   fontFamily: 'metrofutura',
-  marginLeft: ' 3rem',
+  marginLeft: ' 5rem',
   color: 'white',
   fontSize: '25px',
   letterSpacing: '40px',
+  '@media': {
+    'screen and (min-width: 800px)': {
+      marginLeft: '3rem'
+    },
+  },
 })
