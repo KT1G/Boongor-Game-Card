@@ -42,11 +42,8 @@ export const card = style({
     },
   },
 })
-export const cssNoShadow = style({
-  ':before': {
-    background: 'none',
-  },
-})
+
+
 
 export const header = style({
   width: '100%',
@@ -106,7 +103,7 @@ export const tipoContainerWithoutAbility = style({
   ':before': {
     position: 'absolute',
     left: '.7rem',
-    top: '-.8rem',
+    top: '-.5rem',
     borderRadius: '50%',
     content: '',
     width: '100%',
@@ -150,14 +147,13 @@ export const tipoContainerWithoutAbility = style({
       borderRadius: '50%',
       ':before': {
         position: 'absolute',
-        left: '-1.2rem',
-        top: '-1rem',
+        left: '-1.5rem',
+        top: '-1.5rem',
         borderRadius: '50%',
         content: '',
-        width: '%',
         height: '100%',
         backgroundColor: 'black',
-        filter: 'blur(17px) ',
+        filter: 'blur(30px) ',
       },
     },
   },
