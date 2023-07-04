@@ -9,6 +9,9 @@ interface Props {
 
 const Card = ({ carta }: Props) => {
   const cssImage = carta.cartaTipo === CardTypeEnum.BASIC ? imageBasic : image
+  const cssNoShadow =
+    carta.cartaTipo === CardTypeEnum.BASIC ||
+    carta.cartaTipo === CardTypeEnum.POINT
   const borderColorWhenEpic = carta.isEpic != null ? '7px solid #ffefaa' : ''
   const backgroundColorWhenEpic = carta.isEpic != null ? '#ffefaa' : ''
 
@@ -18,7 +21,7 @@ const Card = ({ carta }: Props) => {
         border: borderColorWhenEpic,
         background: backgroundColorWhenEpic,
       }}
-      className={card}
+      className={`${card} ${cssNoShadow ? 'noShadow' : ''} `}
     >
       <CardHeader
         name={carta.name}

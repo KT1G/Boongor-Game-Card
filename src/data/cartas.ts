@@ -1,4 +1,4 @@
-import jacoCard1 from '../assets/jaco/jacoCard1.webp'
+import jacoCard1 from '../assets/jaco/jacoCard1.png'
 import jacoCard2 from '../assets/jaco/jacoCard2.webp'
 import alexitoCard1 from '../assets/alexito/alexitoCard1.webp'
 import alexitoCard2 from '../assets/alexito/alexitoCard2.webp'
@@ -10,7 +10,7 @@ import eliasCard1 from '../assets/elias/eliasCard1.webp'
 import eliasCard2 from '../assets/elias/eliasCard2.webp'
 import jorgeCard1 from '../assets/jorge/jorgeCard1.webp'
 import jorgeCard2 from '../assets/jorge/jorgeCard2.webp'
-import osoCard1 from '../assets/oso/osoCard1.webp'
+import osoCard1 from '../assets/oso/osoCard1.png'
 import osoCard2 from '../assets/oso/osoCard2.webp'
 import zCard1 from '../assets/z/zCard1.webp'
 import zCard2 from '../assets/z/zCard2.webp'
@@ -20,13 +20,14 @@ import zCard2 from '../assets/z/zCard2.webp'
 import dejameIrCard from '../assets/otros/dejameIrCard.webp'
 import shadowLightsCard from '../assets/otros/shadowLightsCard.webp'
 import boongorCard from '../assets/otros/boongorCard.webp'
-import vuelveCard from '../assets/otros/vuelveCard.webp'
+import vuelveCard from '../assets/otros/vuelveCard1.webp'
 import libranosCard from '../assets/otros/libranosCard.webp'
 import rebote from '../assets/otros/rebote.webp'
 import itsATrap from '../assets/otros/its-a-trap.webp'
 import kebab from '../assets/otros/kebab.webp'
 import kratosCard from '../assets/otros/kratosCard.webp'
 import tramposilloCard from '../assets/otros/tramposilloCard.webp'
+import tobillos from '../assets/otros/tobillos.webp'
 
 // Cartas puntos
 
@@ -398,7 +399,7 @@ export const cartasTrampa: Carta[] = [
     name: 'Trampa',
     title: 'Tobillos de goma',
     ability: 'Bajas un escalón.',
-    imagen: libranosCard,
+    imagen: tobillos,
     cartaTipo: CardTypeEnum.TRAP,
     instantanea: true,
   },

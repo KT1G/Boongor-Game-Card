@@ -18,7 +18,7 @@ export const card = style({
     bottom: '0',
     left: '0',
     width: '100%',
-    height: '100%',
+    height: '50%',
     background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 78%)',
   },
 
@@ -40,6 +40,11 @@ export const card = style({
       height: '35rem',
       border: '6px solid #212021',
     },
+  },
+})
+export const cssNoShadow = style({
+  ':before': {
+    background: 'none',
   },
 })
 

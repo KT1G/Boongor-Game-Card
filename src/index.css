@@ -64,7 +64,7 @@ li {
   transform-origin: left center;
   transition: opacity var(--animation--timing), width var(--animation--timing),
     rotate var(--animation--timing), translate var(--animation--timing);
-  box-shadow: 0 0 0 2px rgb(43, 36, 23) ;
+  box-shadow: 0 0 0 2px rgb(43, 36, 23);
 }
 
 .hamburgerMenu:has(input:checked)::before {
@@ -92,7 +92,7 @@ li {
 }
 .sidebar {
   position: fixed;
-  left: var(--hamburguer-margin );
+  left: var(--hamburguer-margin);
   top: var(--hamburguer-margin2);
 }
 
@@ -122,6 +122,10 @@ li {
 
 .navBarMobile > button {
   border: none;
+}
+
+.noShadow::before {
+  background: none !important;
 }
 
 @media screen and (min-width: 800px) {
