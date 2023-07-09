@@ -45,7 +45,7 @@ import points4 from '../assets/points/points4.webp'
 
 import braianReal from '../assets/braian/BraianReal.webp'
 import braianReal2 from '../assets/braian/BraianReal2.webp'
-// import alexitoReal from '../assets/alexito/alexitoReal.webp'
+import alexitoReal from '../assets/alexito/alexitoReal.webp'
 import alexitoReal2 from '../assets/alexito/alexitoReal2.jpg'
 import lucasReal from '../assets/choms/lucasReal.webp'
 import lucasReal2 from '../assets/choms/lucasReal2.webp'
@@ -229,7 +229,7 @@ export const cartasConHabilidad: Carta[] = [
     ability:
       'Si ganas este turno, subes 2 escalones; si pierdes, bajas uno. Se resetea la racha de victorias o derrotas.',
     imagen: alexitoCard1,
-    // imagenReal: alexitoReal,
+    imagenReal: alexitoReal,
     cartaTipo: CardTypeEnum.ABILITY,
   },
   {
@@ -356,7 +356,7 @@ export const cartasSinHabilidad: Carta[] = [
     id: 13,
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     imagen: alexitoCard1,
-    // imagenReal: alexitoReal,
+    imagenReal: alexitoReal,
     cartaTipo: CardTypeEnum.BASIC,
   },
   {
