@@ -40,7 +40,11 @@ const CardHeader = ({ name, typeDamage, type, instantanea }: Props) => {
         )}
         {typeDamage != null && (
           <div className={cssTipoImage}>
-            <img className={tipoDamageWithAbility} src={typeDamage} />
+            <img
+              className={tipoDamageWithAbility}
+              src={typeDamage}
+              alt='tipo de la habilidad'
+            />
           </div>
         )}
       </div>
