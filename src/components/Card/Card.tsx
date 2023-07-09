@@ -1,43 +1,51 @@
-import { CardTypeEnum, Carta } from '../../data/cartas'
-import { card, image, imageBasic } from './Card.css'
-import CardBody from './CardBody'
-import CardHeader from './CardHeader'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { Carta } from '../../data/cartas'
+import CardFront from './CardFront'
+import CardBack from './CardBack'
+import { card } from './Card.css'
 
 interface Props {
   carta: Carta
 }
 
 const Card = ({ carta }: Props) => {
-  const cssImage = carta.cartaTipo === CardTypeEnum.BASIC ? imageBasic : image
-  const cssNoShadow =
-    carta.cartaTipo === CardTypeEnum.BASIC ||
-    carta.cartaTipo === CardTypeEnum.POINT
-  const borderColorWhenEpic = carta.isEpic != null ? '7px solid #ffefaa' : ''
-  const backgroundColorWhenEpic = carta.isEpic != null ? '#ffefaa' : ''
+  const [selectedCard, setSelectedCard] = useState(false)
+  const [timeoutId, setTimeoutId] = useState<number | null>(null)
+
+
+  useEffect(() => {
+    return () => {
+      // Limpiar el temporizador cuando el componente se desmonte
+      if (timeoutId != null) {
+        clearTimeout(timeoutId)
+      }
+    }
+  }, [timeoutId])
+
+  const handleCardClick = () => {
+    setSelectedCard(!selectedCard) // Aquí puedes modificar la lógica para seleccionar la carta según tus necesidades
+    if (timeoutId != null) {
+      clearTimeout(timeoutId)
+    }
+    const timeout = setTimeout(() => {
+      setSelectedCard(false)
+    }, 3000)
+
+    setTimeoutId(timeout)
+  }
 
   return (
-    <article
-      style={{
-        border: borderColorWhenEpic,
-        background: backgroundColorWhenEpic,
-      }}
-      className={`${card} ${cssNoShadow ? 'noShadow' : ''} `}
+    <motion.article
+      whileHover={{ scale: 1.05 }}
+      onClick={handleCardClick} // Añade el evento onClick para seleccionar la carta al hacer clic
+      className={`${card} ${selectedCard ? 'flipped' : ''}`}
     >
-      <CardHeader
-        name={carta.name}
-        typeDamage={carta.tipo}
-        type={carta.cartaTipo}
-        instantanea={carta.instantanea}
-      />
-      <CardBody
-        title={carta.title}
-        ability={carta.ability}
-        isEpic={carta.isEpic}
-      />
-
-      <img alt={carta.name} className={cssImage} src={carta.imagen} />
-    </article>
+      <div className="cardContent" >
+        <CardFront carta={carta} />
+        <CardBack carta={carta} />
+      </div>
+    </motion.article>
   )
 }
-
 export default Card

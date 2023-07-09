@@ -2,25 +2,13 @@ import { style } from '@vanilla-extract/css'
 
 // HEADER
 export const card = style({
-  position: 'relative',
-  backgroundColor: '#212021',
+  transformStyle: 'preserve-3d',
+  perspective: '600px',
   overflow: 'hidden',
   cursor: 'pointer',
-  border: '7px solid #212021',
-  borderRadius: '5px',
-  width: '13.5rem',
-  height: '20rem',
-  ':before': {
-    position: 'absolute',
-    borderRadius: '5px',
-    zIndex: 1,
-    content: '',
-    bottom: '0',
-    left: '0',
-    width: '100%',
-    height: '50%',
-    background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 78%)',
-  },
+  width: '20.25rem',
+  height: '30rem',
+
 
   '@media': {
     'screen and (max-width: 800px)': {
@@ -36,14 +24,11 @@ export const card = style({
       height: '18rem',
     },
     'screen and (max-width: 500px)': {
-      width: '95%',
+      width: '97%',
       height: '35rem',
-      border: '6px solid #212021',
     },
   },
 })
-
-
 
 export const header = style({
   width: '100%',
@@ -57,9 +42,10 @@ export const header = style({
 
 export const containerName = style({
   position: 'relative',
-  minWidth: '3.4rem',
-  padding: '.2rem .5rem',
-  marginTop: '3px',
+  minWidth: '5.1rem',
+  padding: '.3rem .6rem',
+  boxShadow: '-webkit-box-shadow: 6px 13px 26px -7px rgba(0,0,0,0.75)',
+  marginTop: 'var(--marginTopName)',
   background:
     'linear-gradient(0deg, rgba(11,11,11,1) 0%, rgba(38,38,38,1) 49%, rgba(33,32,33,1) 100%)',
 
@@ -67,13 +53,13 @@ export const containerName = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '10px',
-  borderRadius: '10px',
+  height: '18px',
+  borderRadius: '3px',
   fontFamily: 'metrofutura , sans-serif , monospace',
 
   '@media': {
-    'screen and (max-width: 500px)': {
-      minWidth: '5rem',
+    'screen and (max-width: 600px)': {
+      minWidth: '4rem',
       height: '1rem',
     },
   },
@@ -83,10 +69,15 @@ export const textName = style({
   position: 'relative',
   fontFamily: 'Lol, sans-serif',
   textTransform: 'uppercase',
-  letterSpacing: '2px',
-  fontSize: '7px',
+  letterSpacing: '3px',
+  fontSize: '12px',
   textAlign: 'center',
+  color: 'white',
+  top: -0.8,
   '@media': {
+    'screen and (max-width: 550px)': {
+      fontSize: '10px',
+    },
     'screen and (max-width: 500px)': {
       fontSize: '12px',
     },
@@ -95,15 +86,15 @@ export const textName = style({
 
 export const tipoContainerWithoutAbility = style({
   position: 'absolute',
-  top: '8rem',
-  left: '2.5rem',
-  height: '100px',
-  width: '100px',
+  top: '13rem',
+  left: '4.2rem',
+  height: '150px',
+  width: '150px',
   borderRadius: '50%',
   ':before': {
     position: 'absolute',
-    left: '.7rem',
-    top: '-.5rem',
+    left: '.8rem',
+    top: '-.6rem',
     borderRadius: '50%',
     content: '',
     width: '100%',
@@ -123,7 +114,7 @@ export const tipoContainerWithoutAbility = style({
     'screen and (max-width: 650px)': {
       position: 'absolute',
       top: '7.3rem',
-      left: '2.5rem',
+      left: '2.4rem',
       height: '100px',
       width: '100px',
       borderRadius: '50%',
@@ -161,20 +152,26 @@ export const tipoContainerWithoutAbility = style({
 
 export const tipoContainerWithAbility = style({
   position: 'absolute',
-  height: '35px',
-  width: '35px',
-  borderBottomLeftRadius: '7px',
+  height: '52.5px',
+  width: '52.5px',
+  borderRadius: '7px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  right: -1,
-  top: -1,
+  right: 27,
+  top: 27,
   background:
     'linear-gradient(0deg, rgba(11,11,11,1) 0%, rgba(38,38,38,1) 49%, rgba(33,32,33,1) 100%)',
   '@media': {
+    'screen and (max-width: 650px)': {
+      width: '35px',
+      height: '35px',
+      right: '15px',
+    },
     'screen and (max-width: 500px)': {
-      width: '45px',
-      height: '45px',
+      width: '60px',
+      height: '60px',
+      right: '40px',
     },
   },
 })
@@ -182,14 +179,21 @@ export const tipoContainerWithAbility = style({
 export const tipoDamageWithAbility = style({
   position: 'absolute',
   objectFit: 'contain',
-  right: 5,
+  right: 8,
+  top: 7,
   objectPosition: 'center',
   width: '65%',
   height: '70%',
   '@media': {
-    'screen and (max-width: 500px)': {
-      left: '10px',
+    'screen and (max-width: 650px)': {
+      left: '7px',
+      top:'5px',
       width: '60%',
+    },
+    'screen and (max-width: 500px)': {
+      left: '11px',
+      top: '8px',
+      width: '65%',
     },
   },
 })
@@ -201,15 +205,20 @@ export const description = style({
   backdropFilter: 'blur(1px)',
   zIndex: '1',
   position: 'absolute',
-  bottom: 30,
-  left: 10,
+  bottom: 45,
+  left: 30,
   textAlign: 'center',
-  width: '90%',
+  width: '80%',
   color: 'white',
   '@media': {
+    'screen and (max-width: 800px)': {
+      bottom: '40px',
+      left: '22px',
+
+    },
     'screen and (max-width: 500px)': {
       bottom: '70px',
-      left: '18px',
+      left: '2.3rem',
     },
   },
 })
@@ -219,10 +228,17 @@ export const descriptionTittle = style({
   textTransform: 'uppercase',
   fontFamily: 'metrofutura , sans-serif , monospace',
   fontWeight: 'bold',
+  fontSize: 'var( --sizeTitleDescription)',
   textAlign: 'center',
   '@media': {
+    'screen and (max-width: 800px)': {
+      fontSize: '24px',
+    },
+    'screen and (max-width: 550px)': {
+      fontSize: '16px',
+    },
     'screen and (max-width: 500px)': {
-      fontSize: '33px',
+      fontSize: '30px',
     },
   },
 })
@@ -230,16 +246,19 @@ export const descriptionText = style({
   zIndex: '99',
   color: '#e3fffa',
   fontFamily: 'Lol, sans-serif',
-  fontSize: '10px',
+  fontSize: 'var(--sizeDescription)',
   fontWeight: '25px',
   '@media': {
+     'screen and (max-width: 800px)': {
+      fontSize: '12px',
+    },
     'screen and (max-width: 500px)': {
       fontSize: '17px',
     },
   },
 })
 
-// IMGAE
+// IMage
 
 export const image = style({
   position: 'absolute',

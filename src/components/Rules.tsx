@@ -67,7 +67,6 @@ const Rules = () => {
         siempre se activará primero la habilidad del retador.
       </p>
       <p>- En caso de empate, no cuenta para la racha.</p>
-      <p>- En caso de empate, no cuenta para la racha.</p>
 
       <p>
         - Cada vez que un jugador gane o pierda una ronda, la carta con la que

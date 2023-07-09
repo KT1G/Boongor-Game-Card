@@ -5,7 +5,7 @@ export const main = style({
   height: '100%',
   margin: 'auto',
   marginTop: '7rem',
-  width: 'clamp(200px, 90%, 1000px)',
+  width: 'clamp(200px, 90%, 1300px)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -23,11 +23,10 @@ export const containerButtons = style({
   gap: '3rem',
   '@media': {
     'screen and (max-width: 800px)': {
-      display: 'none',// Oculta el contenedor de botones en dispositivos móviles
-    }
+      display: 'none', // Oculta el contenedor de botones en dispositivos móviles
+    },
   },
 })
-
 
 export const buttonsSwitch = style({
   backgroundColor: 'transparent',

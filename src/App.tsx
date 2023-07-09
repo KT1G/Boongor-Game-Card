@@ -63,6 +63,7 @@ function App() {
             type='checkbox'
             checked={isMenuOpen}
             onClick={handleCheckboxClick}
+            readOnly
           />
         </label>
         <aside className='sidebar' ref={sidebarRef}>
