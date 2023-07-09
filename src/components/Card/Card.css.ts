@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 // HEADER
 export const card = style({
   transformStyle: 'preserve-3d',
-  perspective: '600px',
+
   overflow: 'hidden',
   cursor: 'pointer',
   width: '20.25rem',
