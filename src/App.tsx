@@ -58,9 +58,9 @@ function App() {
         </div>
         <BorderBottom />
 
-        <label id="hamburguer" className='hamburgerMenu'>
+        <label htmlFor='hamb' className='hamburgerMenu'>
           <input
-            id='hamburguer'
+            name='hamb'
             type='checkbox'
             checked={isMenuOpen}
             onClick={handleCheckboxClick}
