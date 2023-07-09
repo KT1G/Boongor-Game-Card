@@ -45,9 +45,9 @@ import points4 from '../assets/points/points4.webp'
 
 import braianReal from '../assets/braian/BraianReal.webp'
 import braianReal2 from '../assets/braian/BraianReal2.webp'
-// import alexitoReal from '../assets/alexito/alexitoReal.webp'
-// import alexitoReal2 from '../assets/alexito/alexitoReal2.webp'
-import lucasReal from '../assets/choms/LucasReal.webp'
+import alexitoReal from '../assets/alexito/alexitoReal.webp'
+import alexitoReal2 from '../assets/alexito/alexitoReal2.webp'
+import lucasReal from '../assets/choms/lucasReal.webp'
 import lucasReal2 from '../assets/choms/lucasReal2.webp'
 import eliasReal from '../assets/elias/eliasReal.webp'
 import eliasReal2 from '../assets/elias/eliasReal2.webp'
@@ -63,8 +63,8 @@ import zReal2 from '../assets/z/zReal2.jpg'
 import itsATrapReal from '../assets/otros/itsATrapReal.jpg'
 import vuelveAMirarReal from '../assets/otros/vuelveAMirarReal.jpg'
 import libranosReal from '../assets/otros/libranosReal.jpg'
-import tramposilloReal from '../assets/otros/tramposilloReal.jpg'
 import tobillosReal from '../assets/otros/tobillosReal.jpg'
+import tramposilloReal from '../assets/otros/tramposilloReal.jpg'
 
 export type CardType = 'RULES' | 'BASIC' | 'ABILITY' | 'TRAP' | 'POINT'
 export enum CardTypeEnum {
@@ -229,7 +229,7 @@ export const cartasConHabilidad: Carta[] = [
     ability:
       'Si ganas este turno, subes 2 escalones; si pierdes, bajas uno. Se resetea la racha de victorias o derrotas.',
     imagen: alexitoCard1,
-    imagenReal: braianReal,
+    imagenReal: alexitoReal,
     cartaTipo: CardTypeEnum.ABILITY,
   },
   {
@@ -240,7 +240,7 @@ export const cartasConHabilidad: Carta[] = [
     ability:
       'Puedes desafiar a dos oponentes diferentes en este turno. Juega una carta de desafío contra cada uno y resuelve los enfrentamientos por separado. Si ganas ambos enfrentamientos, subes 1 escalón. Tu racha de victorias no se ve afectada.',
     imagen: alexitoCard2,
-    imagenReal: braianReal,
+    imagenReal: alexitoReal2,
     cartaTipo: CardTypeEnum.ABILITY,
   },
   {
@@ -356,14 +356,14 @@ export const cartasSinHabilidad: Carta[] = [
     id: 13,
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg',
     imagen: alexitoCard1,
-    imagenReal: braianReal,
+    imagenReal: alexitoReal,
     cartaTipo: CardTypeEnum.BASIC,
   },
   {
     id: 14,
     tipo: 'https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg',
     imagen: alexitoCard2,
-    imagenReal: braianReal,
+    imagenReal: alexitoReal2,
     cartaTipo: CardTypeEnum.BASIC,
   },
   {
