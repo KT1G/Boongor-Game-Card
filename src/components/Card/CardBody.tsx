@@ -12,14 +12,14 @@ const CardBody = ({ title = '', ability = '', isEpic }: Props) => {
   const colorTitleWhenEpic = isEpic != null ? '#ffefaa' : ''
   return (
     <section className={description}>
-      <h3
+      <h2
         style={{
           color: colorTitleWhenEpic,
         }}
         className={descriptionTittle}
       >
         {title}
-      </h3>
+      </h2>
       {title !== '' && <BorderBottom />}
       <p className={descriptionText}>{ability}</p>
     </section>
