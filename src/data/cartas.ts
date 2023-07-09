@@ -63,8 +63,8 @@ import zReal2 from '../assets/z/zReal2.jpg'
 import itsATrapReal from '../assets/otros/itsATrapReal.jpg'
 import vuelveAMirarReal from '../assets/otros/vuelveAMirarReal.jpg'
 import libranosReal from '../assets/otros/libranosReal.jpg'
-import tobillosReal from '../assets/otros/tobillosReal.jpg'
 import tramposilloReal from '../assets/otros/tramposilloReal.jpg'
+import tobillosReal from '../assets/otros/tobillosReal.jpg'
 
 export type CardType = 'RULES' | 'BASIC' | 'ABILITY' | 'TRAP' | 'POINT'
 export enum CardTypeEnum {
