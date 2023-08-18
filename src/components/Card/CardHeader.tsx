@@ -21,6 +21,7 @@ const CardHeader = ({ name, typeDamage, type, instantanea }: Props) => {
       ? tipoContainerWithAbility
       : tipoContainerWithoutAbility
   const isBasicCard = type === CardTypeEnum.BASIC
+
   const colorTrap = type === CardTypeEnum.TRAP ? 'hsl(0, 100%, 20%)' : ''
   const isInstantanea = type === CardTypeEnum.TRAP && instantanea === true
 
@@ -31,13 +32,13 @@ const CardHeader = ({ name, typeDamage, type, instantanea }: Props) => {
           <div
             style={{
               background: colorTrap,
-              color: 'white',
             }}
             className={containerName}
           >
             <p className={textName}>{name}</p>
           </div>
         )}
+
         {typeDamage != null && (
           <div className={cssTipoImage}>
             <img

@@ -3,7 +3,7 @@ import { rules } from './Rules.css'
 const Rules = () => {
   return (
     <section className={rules}>
-      <h1>Reglas del juego: "Boong"</h1>
+      <h1>Reglas del juego: "Boongor"</h1>
 
       <h2>1. Objetivo principal:</h2>
       <p>
@@ -14,23 +14,66 @@ const Rules = () => {
       </p>
 
       <h2>2. Tipos de cartas:</h2>
-      <p>- Luz (LIGHT): Vence a las cartas de Sombra (Shadow).</p>
-      <p>- Sombra (SHADOW): Vence a las cartas de Escalones (Stairs).</p>
-      <p>- Escalones (STAIRS): Vence a las cartas de Luz (Light).</p>
+
+      <div className='rules-img-container'>
+        -{' '}
+        <img
+          className='rules-img'
+          src='https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg'
+          alt='carta tipo larange'
+        />
+        <p>(LARANGE) :</p>
+        <p> Gana a las cartas de tipo</p>
+        <img
+          className='rules-img'
+          src='https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg'
+          alt='carta tipo grinin'
+        />
+      </div>
+      <div className='rules-img-container'>
+        -{' '}
+        <img
+          className='rules-img'
+          src='https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/bc.svg'
+          alt='carta tipo grinin'
+        />
+        <p>(GRININ) :</p>
+        <p> Gana a las cartas de tipo</p>
+        <img
+          className='rules-img'
+          src='https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg'
+          alt='carta tipo yelouston'
+        />
+      </div>
+      <div className='rules-img-container'>
+        -{' '}
+        <img
+          className='rules-img'
+          src='https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/sh.svg'
+          alt='carta tipo yelouston'
+        />
+        <p>(YELOUSTON) :</p>
+        <p> Gana a las cartas de tipo</p>
+        <img
+          className='rules-img'
+          src='https://masteringruneterra.com/wp-content/plugins/deck-viewer/assets/images/factions/pz.svg'
+          alt='carta tipo LARANGE'
+        />
+      </div>
 
       <h2>3. Tipos de carta:</h2>
       <p>
         - Carta desafío estándar: No posee habilidades y puede ser de cualquiera
-        de los 3 tipos (Luz, Sombra o Escalones).
+        de los 3 tipos (Larange, Grinin o Yelouston).
       </p>
       <p>
         - Carta desafío con habilidad: Posee una habilidad especial y también
-        pertenece a uno de los 3 tipos (Luz, Sombra o Escalones).
+        pertenece a uno de los 3 tipos (Larange, Grinin o Yelouston).
       </p>
       <p>- Carta trampa:</p>
       <ul>
         <li>
-          <span>Instantánea</span>: Se activan al robarlas del mazo.
+          <span>Instantanea</span>: Se activan al principio de la ronda.
         </li>
         <li>
           <span>libre</span>: Se puede usar en cualquier momento de tu turno o

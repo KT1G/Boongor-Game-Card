@@ -3,12 +3,10 @@ import { style } from '@vanilla-extract/css'
 // HEADER
 export const card = style({
   transformStyle: 'preserve-3d',
-
   overflow: 'hidden',
   cursor: 'pointer',
   width: '20.25rem',
   height: '30rem',
-
 
   '@media': {
     'screen and (max-width: 800px)': {
@@ -42,7 +40,7 @@ export const header = style({
 
 export const containerName = style({
   position: 'relative',
-  minWidth: '5.1rem',
+  minWidth: '5rem',
   padding: '.3rem .6rem',
   boxShadow: '-webkit-box-shadow: 6px 13px 26px -7px rgba(0,0,0,0.75)',
   marginTop: 'var(--marginTopName)',
@@ -59,21 +57,19 @@ export const containerName = style({
 
   '@media': {
     'screen and (max-width: 600px)': {
-      minWidth: '4rem',
+      minWidth: '5rem',
       height: '1rem',
     },
   },
 })
 
 export const textName = style({
-  position: 'relative',
   fontFamily: 'Lol, sans-serif',
   textTransform: 'uppercase',
   letterSpacing: '3px',
-  fontSize: '12px',
+  fontSize: '14px',
   textAlign: 'center',
   color: 'white',
-  top: -0.8,
   '@media': {
     'screen and (max-width: 550px)': {
       fontSize: '10px',
@@ -87,20 +83,20 @@ export const textName = style({
 export const tipoContainerWithoutAbility = style({
   position: 'absolute',
   top: '13rem',
-  left: '4.2rem',
+  left: '4.5rem',
   height: '150px',
   width: '150px',
   borderRadius: '50%',
   ':before': {
     position: 'absolute',
-    left: '.8rem',
+    left: '.9rem',
     top: '-.6rem',
     borderRadius: '50%',
     content: '',
     width: '100%',
     height: '100%',
     backgroundColor: 'black',
-    filter: 'blur(14px) ',
+    filter: 'blur(17px) ',
   },
   '@media': {
     'screen and (max-width: 800px)': {
@@ -187,7 +183,7 @@ export const tipoDamageWithAbility = style({
   '@media': {
     'screen and (max-width: 650px)': {
       left: '7px',
-      top:'5px',
+      top: '5px',
       width: '60%',
     },
     'screen and (max-width: 500px)': {
@@ -206,7 +202,7 @@ export const description = style({
   zIndex: '1',
   position: 'absolute',
   bottom: 45,
-  left: 30,
+  left: 32,
   textAlign: 'center',
   width: '80%',
   color: 'white',
@@ -214,7 +210,6 @@ export const description = style({
     'screen and (max-width: 800px)': {
       bottom: '40px',
       left: '22px',
-
     },
     'screen and (max-width: 500px)': {
       bottom: '70px',
@@ -249,7 +244,7 @@ export const descriptionText = style({
   fontSize: 'var(--sizeDescription)',
   fontWeight: '25px',
   '@media': {
-     'screen and (max-width: 800px)': {
+    'screen and (max-width: 800px)': {
       fontSize: '12px',
     },
     'screen and (max-width: 500px)': {

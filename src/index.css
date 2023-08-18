@@ -47,6 +47,14 @@ li {
   --sizeTitleDescription: 27px;
   --sizeDescription: 15.75px;
 }
+.rules-img-container{
+  display: flex;
+  gap: .5rem
+}
+.rules-img{
+  width: 20px; 
+  
+}
 
 .hamburgerMenu {
   --x--width: calc(var(--hamburguer--height) * 1.41421356237);
