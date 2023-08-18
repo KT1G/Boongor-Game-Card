@@ -26,7 +26,10 @@ export const title = style({
   letterSpacing: '40px',
   '@media': {
     'screen and (min-width: 800px)': {
-      marginLeft: '3rem'
+      marginLeft: '3rem',
+    },
+    'screen and (max-width: 500px)': {
+      letterSpacing:'30px'
     },
   },
 })
